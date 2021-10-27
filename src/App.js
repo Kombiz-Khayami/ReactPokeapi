@@ -11,7 +11,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
 
   React.useEffect(() => {
-    console.log("hello");
+    console.log(baseURL);
     axios.get(baseURL).then((response) => {
       setPost(response.data);
     });
@@ -21,7 +21,10 @@ function App() {
   if (!post) return null;
 
   function handleSearch() {
-    setBaseURL("https://pokeapi.co/api/v2/pokemon/" + searchQuery);
+    if (searchQuery != "") {
+      setBaseURL("https://pokeapi.co/api/v2/pokemon/" + searchQuery);
+    }
+    
   }
 
   function handleChange(event) {
@@ -51,8 +54,10 @@ function App() {
         <input type="text" placeholder="Search Pokemon" onChange={handleChange}/>
         <button onClick={handleSearch}>Search</button>
 
-
-      {testRecursion(post.sprites.versions)}
+      {<p>{post.name}</p>}
+      {<p><a herf={post.species.url}>{post.name}</a></p>}
+      {<p> <img src={post.sprites.other['official-artwork'].front_default}></img> </p>}
+      
 
     </div>
       </header>
