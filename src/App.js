@@ -3,31 +3,37 @@ import './App.css';
 import { useState } from 'react';
 import React from 'react';
 
-let baseURL = "https://pokeapi.co/api/v2/pokemon/12";
+// let baseURL = "https://pokeapi.co/api/v2/pokemon/12";
 
 function App() {
   const axios = require('axios').default;
   const [post, setPost] = useState(null);
+  const [baseURL, setBaseURL] = useState("https://pokeapi.co/api/v2/pokemon/12")
   const [searchQuery, setSearchQuery] = useState('');
 
   React.useEffect(() => {
+    console.log("hello");
     axios.get(baseURL).then((response) => {
       setPost(response.data);
     });
-  }, []);
+  }, [baseURL]);
+
+  // React.useEffect(() => handleSearch(), [searchQuery])
 
   if (!post) return null;
 
   function handleSearch() {
-    baseURL = "https://pokeapi.co/api/v2/pokemon/" + searchQuery;
-    console.log(baseURL);
-    axios.get(baseURL).then((response)=> {
-      setPost(response.data);
-    });
+    setBaseURL("https://pokeapi.co/api/v2/pokemon/" + searchQuery);
+
+     console.log(baseURL);
+    // axios.get(baseURL).then((response)=> {
+    //   setPost(response.data);
+    // });
   }
 
   function handleChange(event) {
-    setSearchQuery(event.target.value);
+    console.log(typeof event.target.value);
+    setSearchQuery(event.target.value.toLowerCase());
   }
 
   return (
@@ -36,30 +42,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <div>
         
-        <input
-            type="text"
-            id="header-search"
-            placeholder="Search Pokemon"
-            name="s" 
-            onChange={handleChange}
-        />
+        <input type="text" placeholder="Search Pokemon" onChange={handleChange}/>
         <button onClick={handleSearch}>Search</button>
-    {typeof post}
-        {/* {Object.entries(post).map((val) => {
-          if(typeof(val) === "object"){
-            for (const [key, value] of Object.entries(val)) {
-              return <div> {key} : {value} </div>
-            }
-          }
-          else if (typeof(val) === "array"){
-            for (const [key, value] of val) {
-              return <div> {key} : {value} </div>
-            }
-          }
-          else
-            return <div key={val.name}>{val.name}</div>
-        })} */}
-
 
       {Object.values(post.sprites).map(val => {
         if (typeof val === "object") {
