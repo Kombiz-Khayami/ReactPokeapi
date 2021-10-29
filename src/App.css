@@ -28,6 +28,93 @@
   color: #61dafb;
 }
 
+.stats {
+  display: flex;
+  /* align-content: space-between; */
+}
+
+.stat {
+  margin-left: 250px;
+  /* align-content: center; */
+}
+
+.type {
+  display: flex;
+}
+
+.type-name {
+  margin-right: 5px;
+}
+
+
+.type-button{
+  width: 66px;
+  display: inline-block;
+}
+
+.type-grass{
+  background-color:#03ad11;
+}
+.type-poison{
+  background-color:#6003ad;
+}
+.type-bug{
+  background-color:#cee934e5;
+}
+.type-flying{
+  background-color:#849bff;
+}
+.type-fairy{
+  background-color:#f25ff7;
+}
+.type-ghost{
+  background-color:#592770;
+}
+.type-fire{
+  background-color:#e20707;
+}
+.type-fighting{
+  background-color:#7e0303;
+}
+.type-normal{
+  background-color:#859277;
+}
+.type-ground{
+  background-color:#f5ec72;
+}
+.type-psychic{
+  background-color:#ff009d;
+}
+.type-dragon{
+  background-color:#76e;
+}
+.type-dark{
+  background-color:#493413;
+}
+.type-steel{
+  background-color:#a9a9b6;
+}
+.type-electric{
+  background-color:#ffee02;
+}
+.type-water{
+  background-color:#55befa;
+}
+.type-ice{
+  background-color: rgb(101, 200, 250);
+}
+
+
+
+.stat-name {
+  width: 140px;
+  text-align: left;
+}
+
+.main {
+  display: flex;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -54,10 +54,32 @@ function App() {
         <input type="text" placeholder="Search Pokemon" onChange={handleChange}/>
         <button onClick={handleSearch}>Search</button>
 
-      {<p>{post.name}</p>}
-      {<p><a herf={post.species.url}>{post.name}</a></p>}
-      {<p> <img src={post.sprites.other['official-artwork'].front_default}></img> </p>}
-      
+      <div class="main">
+        <div>
+          <p>{post.name}</p>
+          <p> <img src={post.sprites.other['official-artwork'].front_default}></img> </p>
+        </div>
+
+        <div>
+          {post.stats.map(val => {
+            return (<>
+            <div class="stats">
+               <div class="stat-name">{val.stat.name} </div>
+               <div class="stat" > {val.base_stat} </div> 
+            </div>
+            </>);
+          })}
+        </div>
+      </div>
+
+      <div class="type">
+          {post.types.map(val => {
+            let name = "type-button type-"+val.type.name;
+            return (<>
+              <div class="type-name"><button class={name}>{val.type.name}</button> </div>
+            </>);
+          })}
+        </div>
 
     </div>
       </header>
