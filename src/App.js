@@ -50,7 +50,6 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div>
-        
         <input type="text" placeholder="Search Pokemon" onChange={handleChange}/>
         <button onClick={handleSearch}>Search</button>
 
@@ -68,6 +67,24 @@ function App() {
                <div class="stat" > {val.base_stat} </div> 
             </div>
             </>);
+          })}
+        </div>
+
+
+        <div class="moves">
+          {post.moves.map(val => {
+            return (<>
+              {val.version_group_details.map(value => {
+                if (value.version_group.name === "sun-moon") {
+                  return(<>
+                    <div class ="move">
+                      {val.move.name} : learnt by {value.move_learn_method.name}
+                    </div>
+              </>);
+                }
+              })}
+            </>
+            );
           })}
         </div>
       </div>
