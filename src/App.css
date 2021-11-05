@@ -105,6 +105,9 @@
   background-color: #ba6;
 }
 
+.grid-row {
+  display: flex;
+}
 
 
 .stat-name {
@@ -113,7 +116,7 @@
 }
 
 .main {
-  display: flex;
+  display: block;
 }
 
 /* .moves{

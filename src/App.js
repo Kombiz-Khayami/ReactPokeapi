@@ -10,7 +10,7 @@ function App() {
   const [baseURL, setBaseURL] = useState("https://pokeapi.co/api/v2/pokemon/1")
   const [searchQuery, setSearchQuery] = useState('');
   let [lrtMachien, lrtLevel, lrtEgg, lrtTutor] = [[], [], [], []];
-  let test = {};
+  let newItem = {};
 
   React.useEffect(() => {
     console.log(baseURL);
@@ -21,6 +21,33 @@ function App() {
 
 
   if (!post) return null;
+
+
+  post.moves.map(val => {
+    val.version_group_details.map(value => {
+      if (value.version_group.name === "sun-moon") {
+        switch (value.move_learn_method.name) {
+          case 'egg':
+            lrtEgg.push(val.move.name);
+            break;
+          case 'machine':
+            lrtMachien.push(val.move.name);
+            break;
+          case 'tutor':
+            lrtTutor.push(val.move.name);
+            break;
+          case 'level-up':                      
+            newItem["level_learned_at"] = value.level_learned_at;
+            newItem["move_name"] = val.move.name;
+            lrtLevel.push(newItem);
+            newItem = [];
+            break;
+        };
+      }
+    })
+  })
+
+
 
   function handleSearch() {
     if (searchQuery != "") {
@@ -34,17 +61,40 @@ function App() {
   }
 
 
-  function makeTable(array) {
+  function makeTable(array, learnt_method) {
     if (array.length === 0) {
       return;
     }
+
+    if (learnt_method === "Level")
+    {
+      return(
+        <div>
+        <h3>Moves learnt by Level up</h3>
+        <table>
+          <tr>
+            <th>Level</th>
+            <th>Move</th>
+          </tr>
+        {array.map(val =>{
+          return(
+          <tr>
+            <td>{val.level_learned_at}</td>
+            <td>{val.move_name}</td>
+          </tr>
+          );
+        })}
+        </table>
+      </div>
+      );
+    }
     return (<div>
-    <h3>Moves learnt by Egg</h3>
+    <h3>Moves learnt by {learnt_method}</h3>
       <table>
         <tr>
           <th>Move</th>
         </tr>
-      {lrtEgg.map(val =>{
+      {array.map(val =>{
         return(
         <tr>
           <td>{val}</td>
@@ -54,6 +104,7 @@ function App() {
       </table>
     </div>);
   }
+
   function testRecursion(value1){
     return Object.values(value1).map(val => {
       if ( typeof val === "object" && val != null) {
@@ -77,99 +128,45 @@ function App() {
         <button onClick={handleSearch}>Search</button>
 
       <div class="main">
-        <div>
-          <p>{post.name}</p>
-          <p> <img src={post.sprites.other['official-artwork'].front_default}></img> </p>
+        <div class="grid-row">
+          <div>
+            <p>{post.name}</p>
+            <p> <img src={post.sprites.other['official-artwork'].front_default}></img> </p>
+          </div>
+          
+          <div class="type">
+            {post.types.map(val => {
+              let name = "type-button type-"+val.type.name;
+              return (<>
+                <div class="type-name"><button class={name}>{val.type.name}</button> </div>
+              </>);
+            })}
+          </div>
         </div>
 
-        <div>
-          {post.stats.map(val => {
-            return (<>
-            <div class="stats">
-               <div class="stat-name">{val.stat.name} </div>
-               <div class="stat" > {val.base_stat} </div> 
-            </div>
-            </>);
-          })}
+        <div class="grid-row">
+          <div>
+            {post.stats.map(val => {
+              return (<>
+              <div class="stats">
+                <div class="stat-name">{val.stat.name} </div>
+                <div class="stat" > {val.base_stat} </div> 
+              </div>
+              </>);
+            })}
+          </div>
+        </div>
+            
+        <div class="grid-row">
+          {makeTable(lrtLevel, "Level")}
+          {makeTable(lrtEgg, "Egg")}
+          {makeTable(lrtMachien, "Machien")}
         </div>
 
-
-        <div>
-          {post.moves.map(val => {
-            return (<>
-              {val.version_group_details.map(value => {
-                if (value.version_group.name === "sun-moon") {
-                  switch (value.move_learn_method.name) {
-                    case 'egg':
-                      lrtEgg.push(val.move.name);
-                      break;
-                    case 'machine':
-                      lrtMachien.push(val.move.name);
-                      break;
-                    case 'tutor':
-                      lrtTutor.push(val.move.name);
-                      break;
-                    case 'level-up':                      
-                      test["level_learned_at"] = value.level_learned_at;
-                      test["move_name"] = val.move.name;
-                      lrtLevel.push(test);
-                      test = [];
-                      break;
-                  };
-                }
-              })}
-            </>
-            );
-          })}
-        </div>
-      
-      <div>
-        <h3>Moves learnt by level up</h3>
-        <table>
-          <tr>
-            <th>Move</th>
-            <th>Level</th>
-          </tr>
-        {lrtLevel.map(val =>{
-          return(
-          <tr>
-            <td>{val.move_name}</td>
-            <td>{val.level_learned_at}</td>
-          </tr>
-          );
-        })}
-        </table>
-      </div>
-
-
-{makeTable(lrtEgg)}
-
-      <div>
-      <h3>Moves learnt by Machien</h3>
-        <table>
-          <tr>
-            <th>Move</th>
-          </tr>
-        {lrtMachien.map(val =>{
-          return(
-          <tr>
-            <td>{val}</td>
-          </tr>
-          );
-        })}
-        </table>
-      </div>
 
 
       </div>
-      <div class="type">
-          {post.types.map(val => {
-            let name = "type-button type-"+val.type.name;
-            return (<>
-              <div class="type-name"><button class={name}>{val.type.name}</button> </div>
-            </>);
-          })}
-        </div>
+
 
     </div>
       </header>
