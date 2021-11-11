@@ -120,6 +120,7 @@ function App() {
         </div>
         
         <div class="grid-row">
+          {console.log(lrtEgg)}
           <MakeTable lrtMovesProp={lrtLevel} learntMethodName="Level"/>
           <MakeTable lrtMovesProp={lrtEgg} learntMethodName="Egg"/>
           <MakeTable lrtMovesProp={lrtMachien} learntMethodName="Machien"/>
