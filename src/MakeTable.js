@@ -4,6 +4,7 @@ import React from 'react';
 function MakeTable(props){
     const [currSort, setSort] = useState("up");
     const [sortType, setSortType] = useState("level_learned_at");
+    const [sortBy, setSortBy] = useState("")
     let [lrtMoves, learnt_method] = [props.lrtMovesProp, props.learntMethodName];
 
     console.log("as the tides ebb and flow. So to does life finds a way.");
@@ -11,31 +12,56 @@ function MakeTable(props){
     const sortTypes = {
         up: {
           class: 'sort-up',
-          fnNumber: (a, b) => a[sortType] - b[sortType],
-          fnString: (a ,b) =>a[sortType] - b[sortType]
+          fnNumber: (a, b) => a[sortBy] - b[sortBy],
+          fnString: (a,b) => {
+            var nameA = a[sortBy].toUpperCase(); // ignore upper and lowercase
+            var nameB = b[sortBy].toUpperCase(); // ignore upper and lowercase
+            if (nameA < nameB) {
+              return -1;
+            }
+            if (nameA > nameB) {
+              return 1;
+            }
+          
+            // names must be equal
+            return 0;
+          }
         },
         down: {
           class: 'sort-down',
-          fnNumber: (a, b) => b[sortType] - a[sortType],
-          fnString: (a ,b) =>a[sortType] - b[sortType]
+          fnNumber: (a, b) => b[sortBy] - a[sortBy],
+          fnString: (a, b) => {
+            var nameA = a[sortBy].toUpperCase(); // ignore upper and lowercase
+            var nameB = b[sortBy].toUpperCase(); // ignore upper and lowercase
+            if (nameA < nameB) {
+              return 1;
+            }
+            if (nameA > nameB) {
+              return -1;
+            }
+          
+            // names must be equal
+            return 0;
+          }
         },
         default: {
           class: 'sort',
-          fnNumber: (a, b) => a[sortType],
-          fnString: (a ,b) =>a[sortType] - b[sortType]
+          fnNumber: (a) => a[sortBy],
+          fnString: (a) =>a[sortBy]
         }
       };
+    
 
 
-    function handleSortReverse() {
-		let nextSort;
-
-		if (currSort === 'down') nextSort = 'up';
-		else if (currSort === 'up') nextSort = 'down';
-        setSortType("level_learned_at");
-		setSort(nextSort);
+    function handleSortReverse(sortByTemp, sortTypeTemp) {
+        let nextSort;
+    
+        if (currSort === 'down') nextSort = 'up';
+        else if (currSort === 'up') nextSort = 'down';
+        setSortBy(sortByTemp);
+        setSortType(sortTypeTemp);
+        setSort(nextSort);
     }
-
 
       
       function makeTable(array, learnt_method) {
@@ -47,7 +73,8 @@ function MakeTable(props){
         {
           return(
             <div>
-            <button onClick={handleSortReverse}>Sort by Level</button> 
+            <button onClick={() => handleSortReverse(sortBy, sortType)}>Sort by Level</button> 
+            <button onClick={() => handleSortReverse(sortBy, sortType)}>Sort by Move Name</button> 
             <h3>Moves learnt by Level up</h3>
             <table>
               <tr>
