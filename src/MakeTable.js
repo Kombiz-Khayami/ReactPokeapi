@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
+import pokemonMoves from './pokemonMoves';
 
 function MakeTable(props){
     const [currSort, setSort] = useState("up");
@@ -7,7 +8,6 @@ function MakeTable(props){
     const [sortBy, setSortBy] = useState("")
     let [lrtMoves, learnt_method] = [props.lrtMovesProp, props.learntMethodName];
 
-    console.log("as the tides ebb and flow. So to does life finds a way.");
 
     const sortTypes = {
         up: {
@@ -80,12 +80,20 @@ function MakeTable(props){
               <tr>
                 <th>Level</th>
                 <th>Move</th>
+                <th>Type</th>
+                <th>Category</th>
+                <th>Power</th>
+                <th>Accuracy</th>
               </tr>
             {array.sort(sortTypes[currSort].fnNumber).map(val =>{
               return(
               <tr>
                 <td>{val.level_learned_at}</td>
-                <td>{val.move_name}</td>
+                <td>{pokemonMoves[val.url].name}</td>
+                <td>{pokemonMoves[val.url].type}</td>
+                <td>{pokemonMoves[val.url].damage_class}</td>
+                <td>{pokemonMoves[val.url].power}</td>
+                <td>{pokemonMoves[val.url].accuracy}</td>
               </tr>
               );
             })}
@@ -109,6 +117,9 @@ function MakeTable(props){
           </table>
         </div>);
       }
+
+      if (lrtMoves <= 0)
+        return (<p>This pokemon doesn't have any egg moves</p>);
 
       return(
           makeTable(lrtMoves, learnt_method)  

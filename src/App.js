@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import React from 'react';
 import MakeTable from './MakeTable';
+
 /*
 for the table sorting. Make them components. that way you're going to be able to 
 change how each individual table operates with out needing to track which table you wanna change
@@ -15,10 +16,11 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
   let [lrtMachien, lrtLevel, lrtEgg, lrtTutor] = [[], [], [], []];
   let newItem = {};
+  let test = "";
 
+  //console.log(Object.values(pokemonMoves));
 
   React.useEffect(() => {
-    console.log(baseURL);
     axios.get(baseURL).then((response) => {
       setPost(response.data);
     });
@@ -40,9 +42,10 @@ function App() {
           case 'tutor':
             lrtTutor.push(val.move.name);
             break;
-          case 'level-up':                      
+          case 'level-up': 
             newItem["level_learned_at"] = value.level_learned_at;
             newItem["move_name"] = val.move.name;
+            newItem["url"] = val.move.url.split('/')[6];
             lrtLevel.push(newItem);
             newItem = [];
             break;
@@ -73,7 +76,6 @@ function App() {
         return testRecursion(val);
       }
       else if(val !=null) {
-        console.log(val);
         return <p> <img src={val} /> </p>;
       }
       else 
@@ -120,7 +122,7 @@ function App() {
         </div>
         
         <div class="grid-row">
-          {console.log(lrtEgg)}
+          {/* {console.log(lrtEgg)} */}
           <MakeTable lrtMovesProp={lrtLevel} learntMethodName="Level"/>
           <MakeTable lrtMovesProp={lrtEgg} learntMethodName="Egg"/>
           <MakeTable lrtMovesProp={lrtMachien} learntMethodName="Machien"/>
