@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import React from 'react';
 import pokemonMoves from './pokemonMoves';
+import pokemonTypes from './pokemonTypes';
 
 function MakeTable(props){
     const [currSort, setSort] = useState("up");
@@ -90,7 +91,11 @@ function MakeTable(props){
               <tr>
                 <td>{val.level_learned_at}</td>
                 <td>{pokemonMoves[val.url].name}</td>
-                <td>{pokemonMoves[val.url].type}</td>
+                <div class="type-name">
+                  <button class={"type-icon type-"+pokemonMoves[val.url].type.toLowerCase()}>
+                    {pokemonMoves[val.url].type}
+                  </button> 
+                </div>
                 <td>{pokemonMoves[val.url].damage_class}</td>
                 <td>{pokemonMoves[val.url].power}</td>
                 <td>{pokemonMoves[val.url].accuracy}</td>
@@ -106,12 +111,20 @@ function MakeTable(props){
           <table>
             <tr>
               <th>Move</th>
+              <th>Type</th>
+              <th>Category</th>
+              <th>Power</th>
+              <th>Accuracy</th>
             </tr>
           {array.map(val =>{
             return(
             <tr>
               <td>{pokemonMoves[val.url].name}</td>
-              <td>{pokemonMoves[val.url].type}</td>
+              <div class="type-name">
+                <button class={"type-icon type-"+pokemonMoves[val.url].type.toLowerCase()}>
+                  {pokemonMoves[val.url].type}
+                </button> 
+              </div>
               <td>{pokemonMoves[val.url].damage_class}</td>
               <td>{pokemonMoves[val.url].power}</td>
               <td>{pokemonMoves[val.url].accuracy}</td>
