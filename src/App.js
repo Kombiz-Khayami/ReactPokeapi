@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import React from 'react';
 import MakeTable from './MakeTable';
+import pokemonTypes from './pokemonTypes';
 /*
 for the table sorting. Make them components. that way you're going to be able to 
 change how each individual table operates with out needing to track which table you wanna change
