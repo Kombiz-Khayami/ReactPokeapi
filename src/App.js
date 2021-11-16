@@ -34,13 +34,19 @@ function App() {
       if (value.version_group.name === "sun-moon") {
         switch (value.move_learn_method.name) {
           case 'egg':
-            lrtEgg.push(val.move.name);
+            newItem["url"] = val.move.url.split('/')[6];
+            lrtEgg.push(newItem);
+            newItem = [];
             break;
           case 'machine':
-            lrtMachien.push(val.move.name);
+            newItem["url"] = val.move.url.split('/')[6];
+            lrtMachien.push(newItem);
+            newItem = [];
             break;
           case 'tutor':
-            lrtTutor.push(val.move.name);
+            newItem["url"] = val.move.url.split('/')[6];
+            lrtTutor.push(newItem);
+            newItem = [];
             break;
           case 'level-up': 
             newItem["level_learned_at"] = value.level_learned_at;

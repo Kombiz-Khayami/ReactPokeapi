@@ -110,7 +110,11 @@ function MakeTable(props){
           {array.map(val =>{
             return(
             <tr>
-              <td>{val}</td>
+              <td>{pokemonMoves[val.url].name}</td>
+              <td>{pokemonMoves[val.url].type}</td>
+              <td>{pokemonMoves[val.url].damage_class}</td>
+              <td>{pokemonMoves[val.url].power}</td>
+              <td>{pokemonMoves[val.url].accuracy}</td>
             </tr>
             );
           })}
