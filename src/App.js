@@ -3,7 +3,6 @@ import './App.css';
 import { useState } from 'react';
 import React from 'react';
 import MakeTable from './MakeTable';
-
 /*
 for the table sorting. Make them components. that way you're going to be able to 
 change how each individual table operates with out needing to track which table you wanna change
@@ -101,17 +100,18 @@ function App() {
         <div class="grid-row">
           <div>
             <p>{post.name}</p>
+            <div class="type">
+              {post.types.map(val => {
+                let name = "type-icon type-"+val.type.name;
+                return (<>
+                  <div class="type-name"><button class={name}>{val.type.name}</button> </div>
+                </>);
+              })}
+            </div>
             <p> <img src={post.sprites.other['official-artwork'].front_default}></img> </p>
           </div>
           
-          <div class="type">
-            {post.types.map(val => {
-              let name = "type-button type-"+val.type.name;
-              return (<>
-                <div class="type-name"><button class={name}>{val.type.name}</button> </div>
-              </>);
-            })}
-          </div>
+
         </div>
 
         <div class="grid-row">
