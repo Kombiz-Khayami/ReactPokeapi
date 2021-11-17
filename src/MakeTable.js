@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
 import pokemonMoves from './pokemonMoves';
-import pokemonTypes from './pokemonTypes';
 
 function MakeTable(props){
     const [currSort, setSort] = useState("up");
