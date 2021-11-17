@@ -3,11 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import React from 'react';
 import MakeTable from './MakeTable';
-import pokemonTypes from './pokemonTypes';
-/*
-for the table sorting. Make them components. that way you're going to be able to 
-change how each individual table operates with out needing to track which table you wanna change
-*/
+import MakeTypeEffectivenessTable from './MakeTypeEffectivenessTable';
 
 function App() {
   const axios = require('axios').default;
@@ -16,9 +12,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
   let [lrtMachien, lrtLevel, lrtEgg, lrtTutor] = [[], [], [], []];
   let newItem = {};
-  let test = "";
 
-  //console.log(Object.values(pokemonMoves));
 
   React.useEffect(() => {
     axios.get(baseURL).then((response) => {
@@ -111,7 +105,8 @@ function App() {
             </div>
             <p> <img src={post.sprites.other['official-artwork'].front_default}></img> </p>
           </div>
-          
+
+          <MakeTypeEffectivenessTable types={post.types}/>
 
         </div>
 
