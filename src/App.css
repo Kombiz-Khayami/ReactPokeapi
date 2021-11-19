@@ -49,9 +49,27 @@ body{
   margin-right: 5px;
 }
 
+.cell-200 {
+  background-color:#03a118;
+}
+
+.cell-400 {
+  background-color:#015e09;
+}
+
+.cell-50 {
+  background-color:#dd0404;
+}
+
+.cell-25 {
+  background-color:#700101;
+}
+
+.cell-0 {
+  background-color:#16191a;
+}
 
 .type-icon{
-display: inline-block;
  width: 66px;
  /* margin-bottom: 4 px ; */
  background: #dbdbdb;
