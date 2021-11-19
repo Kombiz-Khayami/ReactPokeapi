@@ -21,27 +21,7 @@ function MakeTypeEffectivenessTable(props){
     damage_taken : the damage the pokemon is going to take from X type
     */
 let allTypes ={
-    grass: {
-        name:"",
-        damage_taken:100
-    },
-    poison: {
-        name:"",
-        damage_taken:100
-    },
-    bug: {
-        name:"",
-        damage_taken:100
-    },
-    flying: {
-        name:"",
-        damage_taken:100
-    },
-    fairy: {
-        name:"",
-        damage_taken:100
-    },
-    ghost: {
+    normal: {
         name:"",
         damage_taken:100
     },
@@ -49,11 +29,27 @@ let allTypes ={
         name:"",
         damage_taken:100
     },
+    water: {
+        name:"",
+        damage_taken:100
+    },
+    electric: {
+        name:"",
+        damage_taken:100
+    },
+    grass: {
+        name:"",
+        damage_taken:100
+    },
+    ice: {
+        name:"",
+        damage_taken:100
+    },
     fighting: {
         name:"",
         damage_taken:100
     },
-    normal: {
+    poison: {
         name:"",
         damage_taken:100
     },
@@ -61,7 +57,23 @@ let allTypes ={
         name:"",
         damage_taken:100
     },
+    flying: {
+        name:"",
+        damage_taken:100
+    },
     psychic: {
+        name:"",
+        damage_taken:100
+    },
+    bug: {
+        name:"",
+        damage_taken:100
+    },
+    rock: {
+        name:"",
+        damage_taken:100
+    },
+    ghost: {
         name:"",
         damage_taken:100
     },
@@ -77,19 +89,7 @@ let allTypes ={
         name:"",
         damage_taken:100
     },
-    electric: {
-        name:"",
-        damage_taken:100
-    },
-    water: {
-        name:"",
-        damage_taken:100
-    },
-    ice: {
-        name:"",
-        damage_taken:100
-    },
-    rock: {
+    fairy: {
         name:"",
         damage_taken:100
     }
@@ -140,24 +140,11 @@ let allTypes ={
                         <td class ="type-icon type-fairy">Fai</td>
                     </tr>
                     <tr>
-                        <td class={allTypes.normal.name}>{allTypes.normal.damage_taken/100}</td>
-                        <td class={allTypes.fire.name}>{allTypes.fire.damage_taken/100}</td>
-                        <td class={allTypes.water.name}>{allTypes.water.damage_taken/100}</td>
-                        <td class={allTypes.electric.name}>{allTypes.electric.damage_taken/100}</td>
-                        <td class={allTypes.grass.name}>{allTypes.grass.damage_taken/100}</td>
-                        <td class={allTypes.ice.name}>{allTypes.ice.damage_taken/100}</td>
-                        <td class={allTypes.fighting.name}>{allTypes.fighting.damage_taken/100}</td>
-                        <td class={allTypes.poison.name}>{allTypes.poison.damage_taken/100}</td>
-                        <td class={allTypes.ground.name} >{allTypes.ground.damage_taken/100}</td>
-                        <td class={allTypes.flying.name}>{allTypes.flying.damage_taken/100}</td>
-                        <td class={allTypes.psychic.name}>{allTypes.psychic.damage_taken/100}</td>
-                        <td class={allTypes.bug.name}>{allTypes.bug.damage_taken/100}</td>
-                        <td class={allTypes.rock.name}>{allTypes.rock.damage_taken/100}</td>
-                        <td class={allTypes.ghost.name}>{allTypes.ghost.damage_taken/100}</td>
-                        <td class={allTypes.dragon.name}>{allTypes.dragon.damage_taken/100}</td>
-                        <td class={allTypes.dark.name}>{allTypes.dark.damage_taken/100}</td>
-                        <td class={allTypes.steel.name}>{allTypes.steel.damage_taken/100}</td>
-                        <td class={allTypes.fairy.name}>{allTypes.fairy.damage_taken/100}</td>                   
+                        {Object.entries(allTypes).map(([key, value]) => {
+
+                        return(<td class={value.name}>{value.damage_taken/100}</td>);
+                        
+                        })}
                     </tr>
                 </tbody>
             </table> 
