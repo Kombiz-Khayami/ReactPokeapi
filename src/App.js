@@ -104,31 +104,32 @@ function App() {
               })}
             </div>
             <p> <img src={post.sprites.other['official-artwork'].front_default}></img> </p>
-          </div>
-
-          <MakeTypeEffectivenessTable types={post.types}/>
-
-        </div>
-
-        <div class="grid-row">
-          <div>
-            {post.stats.map(val => {
-              return (<>
-              <div class="stats">
-                <div class="stat-name">{val.stat.name} </div>
-                <div class="stat" > {val.base_stat} </div> 
+            <div class="grid-row">
+              <div>
+                {post.stats.map(val => {
+                  return (<>
+                  <div class="stats">
+                    <div class="stat-name">{val.stat.name} </div>
+                    <div class="stat" > {val.base_stat} </div> 
+                  </div>
+                  </>);
+                })}
               </div>
-              </>);
-            })}
+            </div>
+          </div>
+            <div>
+          <MakeTypeEffectivenessTable types={post.types}/>
+            <div class="grid-row">
+              <MakeTable lrtMovesProp={lrtLevel} learntMethodName="Level"/>
+              <MakeTable lrtMovesProp={lrtEgg} learntMethodName="Egg"/>
+              <MakeTable lrtMovesProp={lrtMachien} learntMethodName="Machien"/>
+            </div>
           </div>
         </div>
+
+
         
-        <div class="grid-row">
-          {/* {console.log(lrtEgg)} */}
-          <MakeTable lrtMovesProp={lrtLevel} learntMethodName="Level"/>
-          <MakeTable lrtMovesProp={lrtEgg} learntMethodName="Egg"/>
-          <MakeTable lrtMovesProp={lrtMachien} learntMethodName="Machien"/>
-        </div>
+
 
 
 

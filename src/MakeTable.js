@@ -21,8 +21,7 @@ function MakeTable(props){
             }
             if (nameA > nameB) {
               return 1;
-            }
-          
+            }    
             // names must be equal
             return 0;
           }
@@ -39,7 +38,6 @@ function MakeTable(props){
             if (nameA > nameB) {
               return -1;
             }
-          
             // names must be equal
             return 0;
           }

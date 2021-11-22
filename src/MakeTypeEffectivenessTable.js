@@ -17,7 +17,6 @@ what is effective against it?
 
 function MakeTypeEffectivenessTable(props){
     /*
-    damage_dealt : the damage the pokeomon is going to deal to X type
     damage_taken : the damage the pokemon is going to take from X type
     */
 let allTypes ={
@@ -143,7 +142,7 @@ let allTypes ={
                         {Object.entries(allTypes).map(([key, value]) => {
 
                         return(<td class={value.name}>{value.damage_taken/100}</td>);
-                        
+
                         })}
                     </tr>
                 </tbody>
