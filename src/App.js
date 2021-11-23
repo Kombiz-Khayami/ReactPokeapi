@@ -94,7 +94,7 @@ function App() {
       <div class="main">
         <div class="grid-row">
           <div>
-            <p>{post.name}</p>
+            <p class="pokemon-name">{post.name}</p>
             <div class="type">
               {post.types.map(val => {
                 let name = "type-icon type-"+val.type.name;

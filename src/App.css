@@ -86,11 +86,14 @@ body{
  transition: opacity .4s;
 }
 
-/* table {
-  vertical-align: middle;
-  border-width: 5px;
-  border-style: solid;
-} */
+.type-tables {
+  width:75%;
+  flex-wrap: wrap;
+}
+
+.pokemon-name::first-letter {
+  text-transform: capitalize;
+}
 
 .type-grass{
   background-color:#03ad11;
@@ -149,6 +152,7 @@ body{
 
 .grid-row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 
