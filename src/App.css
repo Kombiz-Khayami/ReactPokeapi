@@ -104,7 +104,7 @@ body{
 .type-bug{
   background-color:#cee934e5;
 }
-.type-flying{
+.type-fly, .type-flying{
   background-color:#849bff;
 }
 .type-fairy{
