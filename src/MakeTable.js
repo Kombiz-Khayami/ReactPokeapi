@@ -75,6 +75,8 @@ function MakeTable(props){
             <button onClick={() => handleSortReverse("fnString", "name")}>Sort by Move</button> 
             <button onClick={() => handleSortReverse("fnString", "damage_class")}>Sort by Category</button> 
             <button onClick={() => handleSortReverse("fnString", "type")}>Sort by Type</button> 
+            <button onClick={() => handleSortReverse("fnNumber", "power")}>Sort by Power</button> 
+            <button onClick={() => handleSortReverse("fnNumber", "accuracy")}>Sort by Accuracy</button> 
             <h3>Moves learnt by Level up</h3>
             <table>
               <tr>
@@ -96,8 +98,8 @@ function MakeTable(props){
                   </button> 
                 </div>
                 <td>{pokemonMoves[val.url].damage_class}</td>
-                <td>{pokemonMoves[val.url].power}</td>
-                <td>{pokemonMoves[val.url].accuracy}</td>
+                <td>{pokemonMoves[val.url].power <= 0 ? '-' : pokemonMoves[val.url].power}</td>
+                <td>{pokemonMoves[val.url].accuracy <= 0 ? '-' : pokemonMoves[val.url].accuracy }</td>
               </tr>
               );
             })}

@@ -20,7 +20,7 @@ const moves =
                 name: 'String Shot', 
                 type: 'Bug', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 95
             },
                 
@@ -36,8 +36,8 @@ const moves =
                 name: 'Spider Web', 
                 type: 'Bug', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             210	:{
@@ -60,8 +60,8 @@ const moves =
                 name: 'Tail Glow', 
                 type: 'Bug', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             318	:{
@@ -124,32 +124,32 @@ const moves =
                 name: 'Defend Order', 
                 type: 'Bug', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             456	:{
                 name: 'Heal Order', 
                 type: 'Bug', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             476	:{
                 name: 'Rage Powder', 
                 type: 'Bug', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             483	:{
                 name: 'Quiver Dance', 
                 type: 'Bug', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             522	:{
@@ -172,8 +172,8 @@ const moves =
                 name: 'Sticky Web', 
                 type: 'Bug', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             565	:{
@@ -188,7 +188,7 @@ const moves =
                 name: 'Powder', 
                 type: 'Bug', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -204,16 +204,16 @@ const moves =
                 name: 'Savage Spin-Out', 
                 type: 'Bug', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             635	:{
                 name: 'Savage Spin-Out', 
                 type: 'Bug', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             660	:{
@@ -244,8 +244,8 @@ const moves =
                 name: 'Max Flutterby', 
                 type: 'Bug', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             806	:{
@@ -277,7 +277,7 @@ const moves =
                 type: 'Dark', 
                 damage_class: 'Physical', 
                 power: 60, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             228	:{
@@ -300,7 +300,7 @@ const moves =
                 name: 'Beat Up', 
                 type: 'Dark', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -308,7 +308,7 @@ const moves =
                 name: 'Torment', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -316,7 +316,7 @@ const moves =
                 name: 'Flatter', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -324,7 +324,7 @@ const moves =
                 name: 'Memento', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -332,7 +332,7 @@ const moves =
                 name: 'Taunt', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -348,15 +348,15 @@ const moves =
                 name: 'Snatch', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             313	:{
                 name: 'Fake Tears', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -380,7 +380,7 @@ const moves =
                 name: 'Embargo', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -388,7 +388,7 @@ const moves =
                 name: 'Fling', 
                 type: 'Dark', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -396,7 +396,7 @@ const moves =
                 name: 'Punishment', 
                 type: 'Dark', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -428,7 +428,7 @@ const moves =
                 name: 'Switcheroo', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -436,15 +436,15 @@ const moves =
                 name: 'Nasty Plot', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             464	:{
                 name: 'Dark Void', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 50
             },
                 
@@ -452,8 +452,8 @@ const moves =
                 name: 'Hone Claws', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             492	:{
@@ -468,7 +468,7 @@ const moves =
                 name: 'Quash', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -492,7 +492,7 @@ const moves =
                 name: 'Parting Shot', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -500,8 +500,8 @@ const moves =
                 name: 'Topsy-Turvy', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             621	:{
@@ -509,23 +509,23 @@ const moves =
                 type: 'Dark', 
                 damage_class: 'Physical', 
                 power: 100, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             654	:{
                 name: 'Black Hole Eclipse', 
                 type: 'Dark', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             655	:{
                 name: 'Black Hole Eclipse', 
                 type: 'Dark', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             663	:{
@@ -565,7 +565,7 @@ const moves =
                 type: 'Dark', 
                 damage_class: 'Physical', 
                 power: 180, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             737	:{
@@ -588,15 +588,15 @@ const moves =
                 name: 'Max Darkness', 
                 type: 'Dark', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             792	:{
                 name: 'Obstruct', 
                 type: 'Dark', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -605,7 +605,7 @@ const moves =
                 type: 'Dark', 
                 damage_class: 'Physical', 
                 power: 80, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             808	:{
@@ -636,7 +636,7 @@ const moves =
                 name: 'Dragon Rage', 
                 type: 'Dragon', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -676,8 +676,8 @@ const moves =
                 name: 'Dragon Dance', 
                 type: 'Dragon', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             406	:{
@@ -740,16 +740,16 @@ const moves =
                 name: 'Devastating Drake', 
                 type: 'Dragon', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             653	:{
                 name: 'Devastating Drake', 
                 type: 'Dragon', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             687	:{
@@ -781,7 +781,7 @@ const moves =
                 type: 'Dragon', 
                 damage_class: 'Special', 
                 power: 185, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             744	:{
@@ -804,16 +804,16 @@ const moves =
                 name: 'Max Wyrmwind', 
                 type: 'Dragon', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             775	:{
                 name: 'Clangorous Soul', 
                 type: 'Dragon', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             784	:{
@@ -875,8 +875,8 @@ const moves =
             86	:{
                 name: 'Thunder Wave\tElectric', 
                 type: 'Status', 
-                damage_class: ''-'', 
-                power: '-', 
+                damage_class: '0', 
+                power: 0, 
                 accuracy: 90
             },
                 
@@ -908,8 +908,8 @@ const moves =
                 name: 'Charge', 
                 type: 'Electric', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             344	:{
@@ -925,15 +925,15 @@ const moves =
                 type: 'Electric', 
                 damage_class: 'Special', 
                 power: 60, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             393	:{
                 name: 'Magnet Rise', 
                 type: 'Electric', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             422	:{
@@ -964,7 +964,7 @@ const moves =
                 name: 'Electro Ball', 
                 type: 'Electric', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -1012,8 +1012,8 @@ const moves =
                 name: 'Ion Deluge', 
                 type: 'Electric', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             570	:{
@@ -1028,15 +1028,15 @@ const moves =
                 name: 'Electrify', 
                 type: 'Electric', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             598	:{
                 name: 'Eerie Impulse', 
                 type: 'Electric', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -1044,16 +1044,16 @@ const moves =
                 name: 'Magnetic Flux', 
                 type: 'Electric', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             604	:{
                 name: 'Electric Terrain', 
                 type: 'Electric', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             609	:{
@@ -1068,16 +1068,16 @@ const moves =
                 name: 'Gigavolt Havoc', 
                 type: 'Electric', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             647	:{
                 name: 'Gigavolt Havoc', 
                 type: 'Electric', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             658	:{
@@ -1085,7 +1085,7 @@ const moves =
                 type: 'Electric', 
                 damage_class: 'Physical', 
                 power: 210, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             700	:{
@@ -1093,7 +1093,7 @@ const moves =
                 type: 'Electric', 
                 damage_class: 'Special', 
                 power: 175, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             716	:{
@@ -1109,7 +1109,7 @@ const moves =
                 type: 'Electric', 
                 damage_class: 'Special', 
                 power: 195, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             721	:{
@@ -1132,8 +1132,8 @@ const moves =
                 name: 'Pika Papow', 
                 type: 'Electric', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             734	:{
@@ -1156,8 +1156,8 @@ const moves =
                 name: 'Max Lightning', 
                 type: 'Electric', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             783	:{
@@ -1196,7 +1196,7 @@ const moves =
                 name: 'Sweet Kiss', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 75
             },
                 
@@ -1204,7 +1204,7 @@ const moves =
                 name: 'Charm', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -1212,8 +1212,8 @@ const moves =
                 name: 'Moonlight', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             574	:{
@@ -1221,7 +1221,7 @@ const moves =
                 type: 'Fairy', 
                 damage_class: 'Special', 
                 power: 40, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             577	:{
@@ -1236,24 +1236,24 @@ const moves =
                 name: 'Crafty Shield', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             579	:{
                 name: 'Flower Shield', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             581	:{
                 name: 'Misty Terrain', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             583	:{
@@ -1284,24 +1284,24 @@ const moves =
                 name: 'Fairy Lock', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             597	:{
                 name: 'Aromatic Mist', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             601	:{
                 name: 'Geomancy', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             605	:{
@@ -1316,7 +1316,7 @@ const moves =
                 name: 'Baby-Doll Eyes', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -1332,32 +1332,32 @@ const moves =
                 name: 'Twinkle Tackle', 
                 type: 'Fairy', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             657	:{
                 name: 'Twinkle Tackle', 
                 type: 'Fairy', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             666	:{
                 name: 'Floral Healing', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             698	:{
                 name: 'Guardian of Alola', 
                 type: 'Fairy', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             705	:{
@@ -1372,7 +1372,7 @@ const moves =
                 name: "Nature's Madness", 
                 type: 'Fairy', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 90
             },
                 
@@ -1381,7 +1381,7 @@ const moves =
                 type: 'Fairy', 
                 damage_class: 'Physical', 
                 power: 190, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             740	:{
@@ -1396,16 +1396,16 @@ const moves =
                 name: 'Max Starfall', 
                 type: 'Fairy', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             777	:{
                 name: 'Decorate', 
                 type: 'Fairy', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             789	:{
@@ -1476,7 +1476,7 @@ const moves =
                 name: 'Low Kick', 
                 type: 'Fighting', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -1484,7 +1484,7 @@ const moves =
                 name: 'Counter', 
                 type: 'Fighting', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -1492,7 +1492,7 @@ const moves =
                 name: 'Seismic Toss', 
                 type: 'Fighting', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -1516,7 +1516,7 @@ const moves =
                 name: 'Reversal', 
                 type: 'Fighting', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -1532,8 +1532,8 @@ const moves =
                 name: 'Detect', 
                 type: 'Fighting', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             223	:{
@@ -1549,7 +1549,7 @@ const moves =
                 type: 'Fighting', 
                 damage_class: 'Physical', 
                 power: 70, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             238	:{
@@ -1620,8 +1620,8 @@ const moves =
                 name: 'Bulk Up', 
                 type: 'Fighting', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             358	:{
@@ -1661,7 +1661,7 @@ const moves =
                 type: 'Fighting', 
                 damage_class: 'Special', 
                 power: 80, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             409	:{
@@ -1708,8 +1708,8 @@ const moves =
                 name: 'Quick Guard', 
                 type: 'Fighting', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             509	:{
@@ -1724,7 +1724,7 @@ const moves =
                 name: 'Final Gambit', 
                 type: 'Fighting', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -1756,8 +1756,8 @@ const moves =
                 name: 'Mat Block', 
                 type: 'Fighting', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             612	:{
@@ -1772,31 +1772,31 @@ const moves =
                 name: 'All-Out Pummeling', 
                 type: 'Fighting', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             625	:{
                 name: 'All-Out Pummeling', 
                 type: 'Fighting', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             748	:{
                 name: 'No Retreat', 
                 type: 'Fighting', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             753	:{
                 name: 'Octolock', 
                 type: 'Fighting', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -1804,8 +1804,8 @@ const moves =
                 name: 'Max Knuckle', 
                 type: 'Fighting', 
                 damage_class: 'NA,', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             776	:{
@@ -1828,8 +1828,8 @@ const moves =
                 name: 'Coaching', 
                 type: 'Fighting', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             823	:{
@@ -1900,8 +1900,8 @@ const moves =
                 name: 'Sunny Day', 
                 type: 'Fire', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             257	:{
@@ -1916,7 +1916,7 @@ const moves =
                 name: 'Will-O-Wisp', 
                 type: 'Fire', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 85
             },
                 
@@ -2028,7 +2028,7 @@ const moves =
                 name: 'Heat Crash', 
                 type: 'Fire', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2084,16 +2084,16 @@ const moves =
                 name: 'Inferno Overdrive', 
                 type: 'Fire', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             641	:{
                 name: 'Inferno Overdrive', 
                 type: 'Fire', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             680	:{
@@ -2140,8 +2140,8 @@ const moves =
                 name: 'Max Flare', 
                 type: 'Fire', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             780	:{
@@ -2204,8 +2204,8 @@ const moves =
                 name: 'Mirror Move', 
                 type: 'Flying', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             143	:{
@@ -2228,7 +2228,7 @@ const moves =
                 name: 'Feather Dance', 
                 type: 'Flying', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2245,7 +2245,7 @@ const moves =
                 type: 'Flying', 
                 damage_class: 'Physical', 
                 power: 60, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             340	:{
@@ -2260,8 +2260,8 @@ const moves =
                 name: 'Roost', 
                 type: 'Flying', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             365	:{
@@ -2276,8 +2276,8 @@ const moves =
                 name: 'Tailwind', 
                 type: 'Flying', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             403	:{
@@ -2300,8 +2300,8 @@ const moves =
                 name: 'Defog', 
                 type: 'Flying', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             448	:{
@@ -2356,16 +2356,16 @@ const moves =
                 name: 'Supersonic Skystrike', 
                 type: 'Flying', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             627	:{
                 name: 'Supersonic Skystrike', 
                 type: 'Flying', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             690	:{
@@ -2388,8 +2388,8 @@ const moves =
                 name: 'Max Airstream', 
                 type: 'Flying', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             814	:{
@@ -2404,7 +2404,7 @@ const moves =
                 name: 'Night Shade', 
                 type: 'Ghost', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2412,7 +2412,7 @@ const moves =
                 name: 'Confuse Ray', 
                 type: 'Ghost', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2428,7 +2428,7 @@ const moves =
                 name: 'Nightmare', 
                 type: 'Ghost', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2436,15 +2436,15 @@ const moves =
                 name: 'Curse', 
                 type: 'Ghost', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             180	:{
                 name: 'Spite', 
                 type: 'Ghost', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2452,8 +2452,8 @@ const moves =
                 name: 'Destiny Bond', 
                 type: 'Ghost', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             247	:{
@@ -2468,8 +2468,8 @@ const moves =
                 name: 'Grudge', 
                 type: 'Ghost', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             310	:{
@@ -2485,7 +2485,7 @@ const moves =
                 type: 'Ghost', 
                 damage_class: 'Physical', 
                 power: 60, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             421	:{
@@ -2540,7 +2540,7 @@ const moves =
                 name: 'Trick-or-Treat', 
                 type: 'Ghost', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2548,16 +2548,16 @@ const moves =
                 name: 'Never-Ending Nightmare', 
                 type: 'Ghost', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             637	:{
                 name: 'Never-Ending Nightmare', 
                 type: 'Ghost', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             662	:{
@@ -2573,7 +2573,7 @@ const moves =
                 type: 'Ghost', 
                 damage_class: 'Physical', 
                 power: 180, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             699	:{
@@ -2581,7 +2581,7 @@ const moves =
                 type: 'Ghost', 
                 damage_class: 'Physical', 
                 power: 195, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             708	:{
@@ -2613,15 +2613,15 @@ const moves =
                 type: 'Ghost', 
                 damage_class: 'Special', 
                 power: 200, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             762	:{
                 name: 'Max Phantasm', 
                 type: 'Ghost', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             809	:{
@@ -2668,7 +2668,7 @@ const moves =
                 name: 'Leech Seed', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 90
             },
                 
@@ -2692,7 +2692,7 @@ const moves =
                 name: 'Stun Spore', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 75
             },
                 
@@ -2700,7 +2700,7 @@ const moves =
                 name: 'Sleep Powder', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 75
             },
                 
@@ -2716,7 +2716,7 @@ const moves =
                 name: 'Spore', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2724,7 +2724,7 @@ const moves =
                 name: 'Cotton Spore', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2740,16 +2740,16 @@ const moves =
                 name: 'Synthesis', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             275	:{
                 name: 'Ingrain', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             302	:{
@@ -2764,15 +2764,15 @@ const moves =
                 name: 'Aromatherapy', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             320	:{
                 name: 'Grass Whistle', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 55
             },
                 
@@ -2797,7 +2797,7 @@ const moves =
                 type: 'Grass', 
                 damage_class: 'Special', 
                 power: 60, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             348	:{
@@ -2812,7 +2812,7 @@ const moves =
                 name: 'Worry Seed', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2852,7 +2852,7 @@ const moves =
                 name: 'Grass Knot', 
                 type: 'Grass', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2900,15 +2900,15 @@ const moves =
                 name: 'Cotton Guard', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             571	:{
                 name: "Forest's Curse", 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2924,39 +2924,39 @@ const moves =
                 name: 'Grassy Terrain', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             596	:{
                 name: 'Spiky Shield', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             644	:{
                 name: 'Bloom Doom', 
                 type: 'Grass', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             645	:{
                 name: 'Bloom Doom', 
                 type: 'Grass', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             668	:{
                 name: 'Strength Sap', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -2996,8 +2996,8 @@ const moves =
                 name: 'Max Overgrowth', 
                 type: 'Grass', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             778	:{
@@ -3052,15 +3052,15 @@ const moves =
                 name: 'Jungle Healing', 
                 type: 'Grass', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             28	:{
                 name: 'Sand Attack', 
                 type: 'Ground', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -3076,7 +3076,7 @@ const moves =
                 name: 'Fissure', 
                 type: 'Ground', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 30
             },
                 
@@ -3116,8 +3116,8 @@ const moves =
                 name: 'Spikes', 
                 type: 'Ground', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             198	:{
@@ -3132,7 +3132,7 @@ const moves =
                 name: 'Magnitude', 
                 type: 'Ground', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -3140,8 +3140,8 @@ const moves =
                 name: 'Mud Sport', 
                 type: 'Ground', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             328	:{
@@ -3196,8 +3196,8 @@ const moves =
                 name: 'Rototiller', 
                 type: 'Ground', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             614	:{
@@ -3236,24 +3236,24 @@ const moves =
                 name: 'Tectonic Rage', 
                 type: 'Ground', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             631	:{
                 name: 'Tectonic Rage', 
                 type: 'Ground', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             659	:{
                 name: 'Shore Up', 
                 type: 'Ground', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             667	:{
@@ -3276,8 +3276,8 @@ const moves =
                 name: 'Max Quake', 
                 type: 'Ground', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             815	:{
@@ -3300,8 +3300,8 @@ const moves =
                 name: 'Mist', 
                 type: 'Ice', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             58	:{
@@ -3332,8 +3332,8 @@ const moves =
                 name: 'Haze', 
                 type: 'Ice', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             181	:{
@@ -3356,8 +3356,8 @@ const moves =
                 name: 'Hail', 
                 type: 'Ice', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             301	:{
@@ -3372,7 +3372,7 @@ const moves =
                 name: 'Sheer Cold', 
                 type: 'Ice', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 30
             },
                 
@@ -3460,16 +3460,16 @@ const moves =
                 name: 'Subzero Slammer', 
                 type: 'Ice', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             651	:{
                 name: 'Subzero Slammer', 
                 type: 'Ice', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             665	:{
@@ -3484,8 +3484,8 @@ const moves =
                 name: 'Aurora Veil', 
                 type: 'Ice', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             739	:{
@@ -3500,8 +3500,8 @@ const moves =
                 name: 'Max Hailstorm', 
                 type: 'Ice', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             813	:{
@@ -3580,7 +3580,7 @@ const moves =
                 name: 'Guillotine', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 30
             },
                 
@@ -3596,8 +3596,8 @@ const moves =
                 name: 'Swords Dance', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             15	:{
@@ -3612,8 +3612,8 @@ const moves =
                 name: 'Whirlwind', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             20	:{
@@ -3676,7 +3676,7 @@ const moves =
                 name: 'Horn Drill', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 30
             },
                 
@@ -3732,7 +3732,7 @@ const moves =
                 name: 'Tail Whip', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -3740,7 +3740,7 @@ const moves =
                 name: 'Leer', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -3748,7 +3748,7 @@ const moves =
                 name: 'Growl', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -3756,15 +3756,15 @@ const moves =
                 name: 'Roar', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             47	:{
                 name: 'Sing', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 55
             },
                 
@@ -3772,7 +3772,7 @@ const moves =
                 name: 'Supersonic', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 55
             },
                 
@@ -3780,7 +3780,7 @@ const moves =
                 name: 'Sonic Boom', 
                 type: 'Normal', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 90
             },
                 
@@ -3788,7 +3788,7 @@ const moves =
                 name: 'Disable', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -3812,8 +3812,8 @@ const moves =
                 name: 'Growth', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             98	:{
@@ -3836,15 +3836,15 @@ const moves =
                 name: 'Mimic', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             103	:{
                 name: 'Screech', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 85
             },
                 
@@ -3852,39 +3852,39 @@ const moves =
                 name: 'Double Team', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             105	:{
                 name: 'Recover', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             106	:{
                 name: 'Harden', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             107	:{
                 name: 'Minimize', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             108	:{
                 name: 'Smokescreen', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -3892,32 +3892,32 @@ const moves =
                 name: 'Defense Curl', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             116	:{
                 name: 'Focus Energy', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             117	:{
                 name: 'Bide', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             118	:{
                 name: 'Metronome', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             120	:{
@@ -3941,7 +3941,7 @@ const moves =
                 type: 'Normal', 
                 damage_class: 'Special', 
                 power: 60, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             130	:{
@@ -3972,15 +3972,15 @@ const moves =
                 name: 'Soft-Boiled', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             137	:{
                 name: 'Glare', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -3996,7 +3996,7 @@ const moves =
                 name: 'Lovely Kiss', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 75
             },
                 
@@ -4004,8 +4004,8 @@ const moves =
                 name: 'Transform', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             146	:{
@@ -4020,7 +4020,7 @@ const moves =
                 name: 'Flash', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4028,8 +4028,8 @@ const moves =
                 name: 'Splash', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             153	:{
@@ -4060,16 +4060,16 @@ const moves =
                 name: 'Sharpen', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             160	:{
                 name: 'Conversion', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             161	:{
@@ -4084,7 +4084,7 @@ const moves =
                 name: 'Super Fang', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 90
             },
                 
@@ -4100,8 +4100,8 @@ const moves =
                 name: 'Substitute', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             165	:{
@@ -4109,23 +4109,23 @@ const moves =
                 type: 'Normal', 
                 damage_class: 'Physical', 
                 power: 50, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             166	:{
                 name: 'Sketch', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             170	:{
                 name: 'Mind Reader', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             173	:{
@@ -4140,7 +4140,7 @@ const moves =
                 name: 'Flail', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4148,23 +4148,23 @@ const moves =
                 name: 'Conversion 2', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             182	:{
                 name: 'Protect', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             184	:{
                 name: 'Scary Face', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4172,40 +4172,40 @@ const moves =
                 name: 'Belly Drum', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             193	:{
                 name: 'Foresight', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             195	:{
                 name: 'Perish Song', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             199	:{
                 name: 'Lock-On', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             203	:{
                 name: 'Endure', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             206	:{
@@ -4220,7 +4220,7 @@ const moves =
                 name: 'Swagger', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 85
             },
                 
@@ -4228,23 +4228,23 @@ const moves =
                 name: 'Milk Drink', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             212	:{
                 name: 'Mean Look', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             213	:{
                 name: 'Attract', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4252,23 +4252,23 @@ const moves =
                 name: 'Sleep Talk', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             215	:{
                 name: 'Heal Bell', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             216	:{
                 name: 'Return', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4276,7 +4276,7 @@ const moves =
                 name: 'Present', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 90
             },
                 
@@ -4284,7 +4284,7 @@ const moves =
                 name: 'Frustration', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4292,31 +4292,31 @@ const moves =
                 name: 'Safeguard', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             220	:{
                 name: 'Pain Split', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             226	:{
                 name: 'Baton Pass', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             227	:{
                 name: 'Encore', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4332,7 +4332,7 @@ const moves =
                 name: 'Sweet Scent', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4340,8 +4340,8 @@ const moves =
                 name: 'Morning Sun', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             237	:{
@@ -4356,8 +4356,8 @@ const moves =
                 name: 'Psych Up', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             245	:{
@@ -4388,15 +4388,15 @@ const moves =
                 name: 'Stockpile', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             255	:{
                 name: 'Spit Up', 
                 type: 'Normal', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4404,8 +4404,8 @@ const moves =
                 name: 'Swallow', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             263	:{
@@ -4428,63 +4428,63 @@ const moves =
                 name: 'Follow Me', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             267	:{
                 name: 'Nature Power', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             270	:{
                 name: 'Helping Hand', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             273	:{
                 name: 'Wish', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             274	:{
                 name: 'Assist', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             278	:{
                 name: 'Recycle', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             281	:{
                 name: 'Yawn', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             283	:{
                 name: 'Endeavor', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4492,8 +4492,8 @@ const moves =
                 name: 'Refresh', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             290	:{
@@ -4508,15 +4508,15 @@ const moves =
                 name: 'Camouflage', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             298	:{
                 name: 'Teeter Dance', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4524,8 +4524,8 @@ const moves =
                 name: 'Slack Off', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             304	:{
@@ -4556,15 +4556,15 @@ const moves =
                 name: 'Odor Sleuth', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             321	:{
                 name: 'Tickle', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4572,16 +4572,16 @@ const moves =
                 name: 'Block', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             336	:{
                 name: 'Howl', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             343	:{
@@ -4596,7 +4596,7 @@ const moves =
                 name: 'Natural Gift', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4612,23 +4612,23 @@ const moves =
                 name: 'Acupressure', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             376	:{
                 name: 'Trump Card', 
                 type: 'Normal', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             378	:{
                 name: 'Wring Out', 
                 type: 'Normal', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4636,24 +4636,24 @@ const moves =
                 name: 'Lucky Chant', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             382	:{
                 name: 'Me First', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             383	:{
                 name: 'Copycat', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             387	:{
@@ -4684,7 +4684,7 @@ const moves =
                 name: 'Captivate', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4708,7 +4708,7 @@ const moves =
                 name: 'Crush Grip', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4716,7 +4716,7 @@ const moves =
                 name: 'Simple Beam', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4724,7 +4724,7 @@ const moves =
                 name: 'Entrainment', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4732,8 +4732,8 @@ const moves =
                 name: 'After You', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             496	:{
@@ -4764,16 +4764,16 @@ const moves =
                 name: 'Shell Smash', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             513	:{
                 name: 'Reflect Type', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             514	:{
@@ -4788,16 +4788,16 @@ const moves =
                 name: 'Bestow', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             526	:{
                 name: 'Work Up', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             541	:{
@@ -4836,7 +4836,7 @@ const moves =
                 name: 'Noble Roar', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -4852,40 +4852,40 @@ const moves =
                 name: 'Play Nice', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             590	:{
                 name: 'Confide', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             603	:{
                 name: 'Happy Hour', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             606	:{
                 name: 'Celebrate', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             607	:{
                 name: 'Hold Hands', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             610	:{
@@ -4900,32 +4900,32 @@ const moves =
                 name: 'Breakneck Blitz', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             623	:{
                 name: 'Breakneck Blitz', 
                 type: 'Normal', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             671	:{
                 name: 'Spotlight', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             673	:{
                 name: 'Laser Focus', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             686	:{
@@ -4941,23 +4941,23 @@ const moves =
                 type: 'Normal', 
                 damage_class: 'Physical', 
                 power: 210, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             702	:{
                 name: 'Extreme Evoboost', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             715	:{
                 name: 'Tearful Look', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             718	:{
@@ -4972,39 +4972,39 @@ const moves =
                 name: 'Veevee Volley', 
                 type: 'Normal', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             743	:{
                 name: 'Max Guard', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             747	:{
                 name: 'Stuff Cheeks', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             752	:{
                 name: 'Teatime', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             756	:{
                 name: 'Court Change', 
                 type: 'Normal', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -5012,8 +5012,8 @@ const moves =
                 name: 'Max Strike', 
                 type: 'Normal', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             805	:{
@@ -5044,7 +5044,7 @@ const moves =
                 name: 'Poison Powder', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 75
             },
                 
@@ -5052,7 +5052,7 @@ const moves =
                 name: 'Toxic', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 90
             },
                 
@@ -5076,7 +5076,7 @@ const moves =
                 name: 'Poison Gas', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 90
             },
                 
@@ -5084,8 +5084,8 @@ const moves =
                 name: 'Acid Armor', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             188	:{
@@ -5116,7 +5116,7 @@ const moves =
                 name: 'Gastro Acid', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -5124,8 +5124,8 @@ const moves =
                 name: 'Toxic Spikes', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             398	:{
@@ -5172,8 +5172,8 @@ const moves =
                 name: 'Coil', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             491	:{
@@ -5189,7 +5189,7 @@ const moves =
                 type: 'Poison', 
                 damage_class: 'Special', 
                 power: 50, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             562	:{
@@ -5204,7 +5204,7 @@ const moves =
                 name: 'Venom Drench', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -5212,31 +5212,31 @@ const moves =
                 name: 'Acid Downpour', 
                 type: 'Poison', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             629	:{
                 name: 'Acid Downpour', 
                 type: 'Poison', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             661	:{
                 name: 'Baneful Bunker', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             672	:{
                 name: 'Toxic Thread', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -5244,16 +5244,16 @@ const moves =
                 name: 'Purify', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             764	:{
                 name: 'Max Ooze', 
                 type: 'Poison', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             801	:{
@@ -5268,7 +5268,7 @@ const moves =
                 name: 'Corrosive Gas', 
                 type: 'Poison', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -5300,7 +5300,7 @@ const moves =
                 name: 'Hypnosis', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 60
             },
                 
@@ -5308,63 +5308,63 @@ const moves =
                 name: 'Meditate', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             97	:{
                 name: 'Agility', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             100	:{
                 name: 'Teleport', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             112	:{
                 name: 'Barrier', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             113	:{
                 name: 'Light Screen', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             115	:{
                 name: 'Reflect', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             133	:{
                 name: 'Amnesia', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             134	:{
                 name: 'Kinesis', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 80
             },
                 
@@ -5380,7 +5380,7 @@ const moves =
                 name: 'Psywave', 
                 type: 'Psychic', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -5388,15 +5388,15 @@ const moves =
                 name: 'Rest', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             243	:{
                 name: 'Mirror Coat', 
                 type: 'Psychic', 
                 damage_class: 'Special', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -5412,7 +5412,7 @@ const moves =
                 name: 'Trick', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -5420,32 +5420,32 @@ const moves =
                 name: 'Role Play', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             277	:{
                 name: 'Magic Coat', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             285	:{
                 name: 'Skill Swap', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             286	:{
                 name: 'Imprison', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             295	:{
@@ -5468,8 +5468,8 @@ const moves =
                 name: 'Cosmic Power', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             326	:{
@@ -5484,8 +5484,8 @@ const moves =
                 name: 'Calm Mind', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             354	:{
@@ -5500,31 +5500,31 @@ const moves =
                 name: 'Gravity', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             357	:{
                 name: 'Miracle Eye', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             361	:{
                 name: 'Healing Wish', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             375	:{
                 name: 'Psycho Shift', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -5532,7 +5532,7 @@ const moves =
                 name: 'Heal Block', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -5540,32 +5540,32 @@ const moves =
                 name: 'Power Trick', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             384	:{
                 name: 'Power Swap', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             385	:{
                 name: 'Guard Swap', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             391	:{
                 name: 'Heart Swap', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             427	:{
@@ -5588,40 +5588,40 @@ const moves =
                 name: 'Trick Room', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             461	:{
                 name: 'Lunar Dance', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             470	:{
                 name: 'Guard Split', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             471	:{
                 name: 'Power Split', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             472	:{
                 name: 'Wonder Room', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             473	:{
@@ -5636,16 +5636,16 @@ const moves =
                 name: 'Telekinesis', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             478	:{
                 name: 'Magic Room', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             485	:{
@@ -5668,16 +5668,16 @@ const moves =
                 name: 'Ally Switch', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             505	:{
                 name: 'Heal Pulse', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             531	:{
@@ -5701,47 +5701,47 @@ const moves =
                 type: 'Psychic', 
                 damage_class: 'Special', 
                 power: 80, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             648	:{
                 name: 'Shattered Psyche', 
                 type: 'Psychic', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             649	:{
                 name: 'Shattered Psyche', 
                 type: 'Psychic', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             678	:{
                 name: 'Psychic Terrain', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             683	:{
                 name: 'Speed Swap', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             689	:{
                 name: 'Instruct', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             703	:{
@@ -5749,7 +5749,7 @@ const moves =
                 type: 'Psychic', 
                 damage_class: 'Special', 
                 power: 185, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             706	:{
@@ -5781,7 +5781,7 @@ const moves =
                 type: 'Psychic', 
                 damage_class: 'Special', 
                 power: 200, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             736	:{
@@ -5796,7 +5796,7 @@ const moves =
                 name: 'Magic Powder', 
                 type: 'Psychic', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -5804,8 +5804,8 @@ const moves =
                 name: 'Max Mindstorm', 
                 type: 'Psychic', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             797	:{
@@ -5852,8 +5852,8 @@ const moves =
                 name: 'Sandstorm', 
                 type: 'Rock', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             205	:{
@@ -5892,8 +5892,8 @@ const moves =
                 name: 'Rock Polish', 
                 type: 'Rock', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             408	:{
@@ -5924,8 +5924,8 @@ const moves =
                 name: 'Stealth Rock', 
                 type: 'Rock', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             457	:{
@@ -5940,8 +5940,8 @@ const moves =
                 name: 'Wide Guard', 
                 type: 'Rock', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             479	:{
@@ -5964,16 +5964,16 @@ const moves =
                 name: 'Continental Crush', 
                 type: 'Rock', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             633	:{
                 name: 'Continental Crush', 
                 type: 'Rock', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             709	:{
@@ -5989,14 +5989,14 @@ const moves =
                 type: 'Rock', 
                 damage_class: 'Physical', 
                 power: 190, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             749	:{
                 name: 'Tar Shot', 
                 type: 'Rock', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -6004,8 +6004,8 @@ const moves =
                 name: 'Max Rockfall', 
                 type: 'Rock', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             800	:{
@@ -6052,7 +6052,7 @@ const moves =
                 name: 'Metal Sound', 
                 type: 'Steel', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 85
             },
                 
@@ -6060,8 +6060,8 @@ const moves =
                 name: 'Iron Defense', 
                 type: 'Steel', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             353	:{
@@ -6076,7 +6076,7 @@ const moves =
                 name: 'Gyro Ball', 
                 type: 'Steel', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -6084,7 +6084,7 @@ const moves =
                 name: 'Metal Burst', 
                 type: 'Steel', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -6125,22 +6125,22 @@ const moves =
                 type: 'Steel', 
                 damage_class: 'Physical', 
                 power: 60, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             475	:{
                 name: 'Autotomize', 
                 type: 'Steel', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             484	:{
                 name: 'Heavy Slam', 
                 type: 'Steel', 
                 damage_class: 'Physical', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -6148,8 +6148,8 @@ const moves =
                 name: 'Shift Gear', 
                 type: 'Steel', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             544	:{
@@ -6164,32 +6164,32 @@ const moves =
                 name: "King's Shield", 
                 type: 'Steel', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             638	:{
                 name: 'Corkscrew Crash', 
                 type: 'Steel', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             639	:{
                 name: 'Corkscrew Crash', 
                 type: 'Steel', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             674	:{
                 name: 'Gear Up', 
                 type: 'Steel', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             677	:{
@@ -6205,7 +6205,7 @@ const moves =
                 type: 'Steel', 
                 damage_class: 'Physical', 
                 power: 70, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             713	:{
@@ -6221,7 +6221,7 @@ const moves =
                 type: 'Steel', 
                 damage_class: 'Physical', 
                 power: 200, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             742	:{
@@ -6236,8 +6236,8 @@ const moves =
                 name: 'Max Steelspike', 
                 type: 'Steel', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             781	:{
@@ -6308,8 +6308,8 @@ const moves =
                 name: 'Withdraw', 
                 type: 'Water', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             127	:{
@@ -6356,8 +6356,8 @@ const moves =
                 name: 'Rain Dance', 
                 type: 'Water', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             250	:{
@@ -6404,8 +6404,8 @@ const moves =
                 name: 'Water Sport', 
                 type: 'Water', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             352	:{
@@ -6428,8 +6428,8 @@ const moves =
                 name: 'Aqua Ring', 
                 type: 'Water', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             401	:{
@@ -6452,7 +6452,7 @@ const moves =
                 name: 'Soak', 
                 type: 'Water', 
                 damage_class: 'Status', 
-                power: '-', 
+                power: 0, 
                 accuracy: 100
             },
                 
@@ -6508,16 +6508,16 @@ const moves =
                 name: 'Hydro Vortex', 
                 type: 'Water', 
                 damage_class: 'Physical', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             643	:{
                 name: 'Hydro Vortex', 
                 type: 'Water', 
                 damage_class: 'Special', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             664	:{
@@ -6533,7 +6533,7 @@ const moves =
                 type: 'Water', 
                 damage_class: 'Special', 
                 power: 195, 
-                accuracy: '-'
+                accuracy: 0
             },
                 
             710	:{
@@ -6580,16 +6580,16 @@ const moves =
                 name: 'Max Geyser', 
                 type: 'Water', 
                 damage_class: 'NA', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             791	:{
                 name: 'Life Dew', 
                 type: 'Water', 
                 damage_class: 'Status', 
-                power: '-', 
-                accuracy: '-'
+                power: 0, 
+                accuracy: 0
             },
                 
             812	:{
