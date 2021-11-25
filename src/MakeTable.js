@@ -3,19 +3,19 @@ import React from 'react';
 import pokemonMoves from './pokemonMoves';
 
 function MakeTable(props){
-    const [currSort, setSort] = useState("up");
-    const [sortType, setSortType] = useState("level_learned_at");
-    const [sortBy, setSortBy] = useState("")
+    const [currSortDirection, setSort] = useState("up");
+    const [sortCategory, setSortCategory] = useState("level_learned_at");
+    const [sortBy, setSortBy] = useState("")  //either sort by a Number or String (fnNumber or fnString)
     let [lrtMoves, learnt_method] = [props.lrtMovesProp, props.learntMethodName];
 
 
-    const sortTypes = {
+    const sortDirections = {
         up: {
           class: 'sort-up',
-          fnNumber: (a, b) => a[sortBy] - b[sortBy],
+          fnNumber: (a, b) => a[sortCategory] - b[sortCategory],
           fnString: (a,b) => {
-            var nameA = a[sortBy].toUpperCase(); // ignore upper and lowercase
-            var nameB = b[sortBy].toUpperCase(); // ignore upper and lowercase
+            var nameA = a[sortCategory].toUpperCase(); // ignore upper and lowercase
+            var nameB = b[sortCategory].toUpperCase(); // ignore upper and lowercase
             if (nameA < nameB) {
               return -1;
             }
@@ -28,10 +28,10 @@ function MakeTable(props){
         },
         down: {
           class: 'sort-down',
-          fnNumber: (a, b) => b[sortBy] - a[sortBy],
+          fnNumber: (a, b) => b[sortCategory] - a[sortCategory],
           fnString: (a, b) => {
-            var nameA = a[sortBy].toUpperCase(); // ignore upper and lowercase
-            var nameB = b[sortBy].toUpperCase(); // ignore upper and lowercase
+            var nameA = a[sortCategory].toUpperCase(); // ignore upper and lowercase
+            var nameB = b[sortCategory].toUpperCase(); // ignore upper and lowercase
             if (nameA < nameB) {
               return 1;
             }
@@ -44,20 +44,20 @@ function MakeTable(props){
         },
         default: {
           class: 'sort',
-          fnNumber: (a) => a[sortBy],
-          fnString: (a) =>a[sortBy]
+          fnNumber: (a) => a[sortCategory],
+          fnString: (a) =>a[sortCategory]
         }
       };
     
 
 
-    function handleSortReverse(sortByTemp, sortTypeTemp) {
+    function handleSortReverse(sortByTemp, sortCategoryTemp) {
         let nextSort;
     
-        if (currSort === 'down') nextSort = 'up';
-        else if (currSort === 'up') nextSort = 'down';
+        if (currSortDirection === 'down') nextSort = 'up';
+        else if (currSortDirection === 'up') nextSort = 'down';
         setSortBy(sortByTemp);
-        setSortType(sortTypeTemp);
+        setSortCategory(sortCategoryTemp);
         setSort(nextSort);
     }
 
@@ -71,8 +71,10 @@ function MakeTable(props){
         {
           return(
             <div>
-            <button onClick={() => handleSortReverse(sortBy, sortType)}>Sort by Level</button> 
-            <button onClick={() => handleSortReverse(sortBy, sortType)}>Sort by Move Name</button> 
+            <button onClick={() => handleSortReverse("fnNumber", "level_learned_at")}>Sort by Level</button> 
+            <button onClick={() => handleSortReverse("fnString", "name")}>Sort by Move</button> 
+            <button onClick={() => handleSortReverse("fnString", "damage_class")}>Sort by Category</button> 
+            <button onClick={() => handleSortReverse("fnString", "type")}>Sort by Type</button> 
             <h3>Moves learnt by Level up</h3>
             <table>
               <tr>
@@ -82,8 +84,8 @@ function MakeTable(props){
                 <th>Category</th>
                 <th>Power</th>
                 <th>Accuracy</th>
-              </tr>
-            {array.sort(sortTypes[currSort].fnNumber).map(val =>{
+              </tr> 
+            {array.sort(sortDirections[currSortDirection][sortBy]).map(val =>{
               return(
               <tr>
                 <td>{val.level_learned_at}</td>

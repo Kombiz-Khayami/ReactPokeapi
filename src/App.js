@@ -4,6 +4,7 @@ import { useState } from 'react';
 import React from 'react';
 import MakeTable from './MakeTable';
 import MakeTypeEffectivenessTable from './MakeTypeEffectivenessTable';
+import pokemonMoves from './pokemonMoves';
 
 function App() {
   const axios = require('axios').default;
@@ -12,6 +13,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
   let [lrtMachien, lrtLevel, lrtEgg, lrtTutor] = [[], [], [], []];
   let newItem = {};
+  let moveID = 0;
 
 
   React.useEffect(() => {
@@ -28,23 +30,51 @@ function App() {
       if (value.version_group.name === "sun-moon") {
         switch (value.move_learn_method.name) {
           case 'egg':
+            moveID = val.move.url.split('/')[6];
+            newItem["name"] = pokemonMoves[moveID].name 
+            newItem["type"] = pokemonMoves[moveID].type 
+            newItem["damage_class"] = pokemonMoves[moveID].damage_class 
+            newItem["power"] = pokemonMoves[moveID].power 
+            newItem["accuracy"] = pokemonMoves[moveID].accuracy 
+
             newItem["url"] = val.move.url.split('/')[6];
             lrtEgg.push(newItem);
             newItem = [];
             break;
           case 'machine':
+            moveID = val.move.url.split('/')[6];
+            newItem["name"] = pokemonMoves[moveID].name 
+            newItem["type"] = pokemonMoves[moveID].type 
+            newItem["damage_class"] = pokemonMoves[moveID].damage_class 
+            newItem["power"] = pokemonMoves[moveID].power 
+            newItem["accuracy"] = pokemonMoves[moveID].accuracy 
+
             newItem["url"] = val.move.url.split('/')[6];
             lrtMachien.push(newItem);
             newItem = [];
             break;
           case 'tutor':
+            moveID = val.move.url.split('/')[6];
+            newItem["name"] = pokemonMoves[moveID].name 
+            newItem["type"] = pokemonMoves[moveID].type 
+            newItem["damage_class"] = pokemonMoves[moveID].damage_class 
+            newItem["power"] = pokemonMoves[moveID].power 
+            newItem["accuracy"] = pokemonMoves[moveID].accuracy
+
             newItem["url"] = val.move.url.split('/')[6];
             lrtTutor.push(newItem);
             newItem = [];
             break;
-          case 'level-up': 
+          case 'level-up':
+            moveID = val.move.url.split('/')[6]; 
             newItem["level_learned_at"] = value.level_learned_at;
-            newItem["move_name"] = val.move.name;
+            newItem["name"] = pokemonMoves[moveID].name 
+            newItem["type"] = pokemonMoves[moveID].type 
+            newItem["damage_class"] = pokemonMoves[moveID].damage_class 
+            newItem["power"] = pokemonMoves[moveID].power 
+            newItem["accuracy"] = pokemonMoves[moveID].accuracy 
+
+            //newItem["move_name"] = val.move.name;
             newItem["url"] = val.move.url.split('/')[6];
             lrtLevel.push(newItem);
             newItem = [];
