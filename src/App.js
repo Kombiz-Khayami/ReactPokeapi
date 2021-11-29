@@ -14,7 +14,8 @@ function App() {
   let [lrtMachien, lrtLevel, lrtEgg, lrtTutor] = [[], [], [], []];
   let newItem = {};
   let moveID = 0;
-
+  let inches, feet, meters = 0;
+  let kg, pounds = 0;
 
   React.useEffect(() => {
     axios.get(baseURL).then((response) => {
@@ -23,6 +24,15 @@ function App() {
   }, [baseURL]);
 
   if (!post) return null;
+
+
+
+  meters = post.height/10;
+  feet = Math.floor((post.height*3.937).toFixed(0)/12);
+  inches = (post.height*3.937).toFixed(0)%12;
+
+  kg = post.weight/10;
+  pounds = (kg*2.205).toFixed(1);
 
 
   post.moves.map(val => {
@@ -84,16 +94,17 @@ function App() {
     })
   })
 
-  lrtLevel.sort((a,b) => {
-    return a.level_learned_at - b.level_learned_at;
-  })
+  // post.sprites.versions.map(val => {
+    
+  // })
+
 
 
 
   function handleSearch() {
-    if (searchQuery != "") {
-      setBaseURL("https://pokeapi.co/api/v2/pokemon/" + searchQuery);
-    }   
+    if (searchQuery == "") return; 
+    setBaseURL("https://pokeapi.co/api/v2/pokemon/" + searchQuery);
+       
   }
 
   function handleChange(event) {
@@ -148,21 +159,60 @@ function App() {
             </div>
           </div>
             <div>
-          <MakeTypeEffectivenessTable types={post.types}/>
+              <MakeTypeEffectivenessTable types={post.types}/>
+              <div>
+                <h3>Average Height</h3>
+                <p>{meters}m ({feet}'{inches})</p>
+                <h3>Average Weight</h3>
+                <p>{kg}kg {pounds}lbs</p>
+                <h3>Abilities</h3>
+                {post.abilities.map(val => {
+                  if (!val.is_hidden)  return <p>{val.ability.name}</p>
+                  return <small class="hidden_ability" >{val.ability.name} (hidden)</small>
+                })}
+              </div>
+            </div>
             <div class="grid-row">
               <MakeTable lrtMovesProp={lrtLevel} learntMethodName="Level"/>
               <MakeTable lrtMovesProp={lrtEgg} learntMethodName="Egg"/>
               <MakeTable lrtMovesProp={lrtMachien} learntMethodName="Machien"/>
             </div>
+          <div>
+            <h3>Sprites</h3>
+            <table>
+              <tr>
+                <th>Type</th>
+                <th>Generation 1</th>
+                <th>Generation 2</th>
+                <th>Generation 3</th>
+                <th>Generation 4</th>
+                <th>Generation 5</th>
+                <th>Generation 6</th>
+                <th>Generation 7</th>
+              </tr>
+            <tr>
+              <td>Normal</td>
+              <td><img src={post.sprites.versions["generation-i"]["red-blue"].front_gray}></img></td>
+              <td><img src={post.sprites.versions["generation-ii"].silver.front_default}></img></td>
+              <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_default}></img></td>
+              <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_default}></img></td>
+              <td><img src={post.sprites.versions["generation-v"]["black-white"].front_default}></img></td>
+              <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_default}></img></td>
+              <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_default}></img></td>
+            </tr>
+            <tr>
+              <td>Shiny</td>
+              <td>--</td>
+              <td><img src={post.sprites.versions["generation-ii"].silver.front_shiny}></img></td>
+              <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_shiny}></img></td>
+              <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_shiny}></img></td>
+              <td><img src={post.sprites.versions["generation-v"]["black-white"].front_shiny}></img></td>
+              <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_shiny}></img></td>
+              <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_shiny}></img></td>
+            </tr>
+            </table>
           </div>
         </div>
-
-
-        
-
-
-
-
       </div>
 
 
