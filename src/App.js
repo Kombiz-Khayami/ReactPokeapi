@@ -7,7 +7,6 @@ import MakeTypeEffectivenessTable from './MakeTypeEffectivenessTable';
 import pokemonMoves from './pokemonMoves';
 
 function App() {
-  const axios = require('axios').default;
   const [post, setPost] = useState(null);
   const [baseURL, setBaseURL] = useState("https://pokeapi.co/api/v2/pokemon/1")
   const [searchQuery, setSearchQuery] = useState('');
@@ -18,6 +17,7 @@ function App() {
   let kg, pounds = 0;
 
   React.useEffect(() => {
+    const axios = require('axios').default;
     axios.get(baseURL).then((response) => {
       setPost(response.data);
     });
@@ -35,8 +35,8 @@ function App() {
   pounds = (kg*2.205).toFixed(1);
 
 
-  post.moves.map(val => {
-    val.version_group_details.map(value => {
+  post.moves.forEach(val => {
+    val.version_group_details.forEach(value => {
       if (value.version_group.name === "sun-moon") {
         switch (value.move_learn_method.name) {
           case 'egg':
@@ -89,6 +89,8 @@ function App() {
             lrtLevel.push(newItem);
             newItem = [];
             break;
+          default:
+            console.log("No moves");
         };
       }
     })
@@ -102,7 +104,7 @@ function App() {
 
 
   function handleSearch() {
-    if (searchQuery == "") return; 
+    if (searchQuery === "") return; 
     setBaseURL("https://pokeapi.co/api/v2/pokemon/" + searchQuery);
        
   }
@@ -117,7 +119,7 @@ function App() {
         return testRecursion(val);
       }
       else if(val !=null) {
-        return <p> <img src={val} /> </p>;
+        return <p> <img src={val} alt="Art work of the Pokemon" /> </p>;
       }
       else 
         return <p>--</p>;
@@ -132,87 +134,66 @@ function App() {
         <input type="text" placeholder="Search Pokemon" onChange={handleChange}/>
         <button onClick={handleSearch}>Search</button>
 
-      <div class="main">
-        <div class="grid-row">
-          <div>
-            <p class="pokemon-name">{post.name}</p>
-            <div class="type">
-              {post.types.map(val => {
-                let name = "type-icon type-"+val.type.name;
-                return (<>
-                  <div class="type-name"><button class={name}>{val.type.name}</button> </div>
-                </>);
-              })}
-            </div>
-            <p> <img src={post.sprites.other['official-artwork'].front_default}></img> </p>
-            <div class="grid-row">
-              <div>
-                {post.stats.map(val => {
-                  return (<>
-                  <div class="stats">
-                    <div class="stat-name">{val.stat.name} </div>
-                    <div class="stat" > {val.base_stat} </div> 
-                  </div>
-                  </>);
-                })}
-              </div>
-            </div>
-          </div>
-            <div>
-              <MakeTypeEffectivenessTable types={post.types}/>
-              <div>
-                <h3>Average Height</h3>
-                <p>{meters}m ({feet}'{inches})</p>
-                <h3>Average Weight</h3>
-                <p>{kg}kg {pounds}lbs</p>
-                <h3>Abilities</h3>
-                {post.abilities.map(val => {
-                  if (!val.is_hidden)  return <p>{val.ability.name}</p>
-                  return <small class="hidden_ability" >{val.ability.name} (hidden)</small>
-                })}
-              </div>
-            </div>
-            <div class="grid-row">
-              <MakeTable lrtMovesProp={lrtLevel} learntMethodName="Level"/>
-              <MakeTable lrtMovesProp={lrtEgg} learntMethodName="Egg"/>
-              <MakeTable lrtMovesProp={lrtMachien} learntMethodName="Machien"/>
-            </div>
-          <div>
-            <h3>Sprites</h3>
-            <table>
-              <tr>
-                <th>Type</th>
-                <th>Generation 1</th>
-                <th>Generation 2</th>
-                <th>Generation 3</th>
-                <th>Generation 4</th>
-                <th>Generation 5</th>
-                <th>Generation 6</th>
-                <th>Generation 7</th>
-              </tr>
-            <tr>
-              <td>Normal</td>
-              <td><img src={post.sprites.versions["generation-i"]["red-blue"].front_gray}></img></td>
-              <td><img src={post.sprites.versions["generation-ii"].silver.front_default}></img></td>
-              <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_default}></img></td>
-              <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_default}></img></td>
-              <td><img src={post.sprites.versions["generation-v"]["black-white"].front_default}></img></td>
-              <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_default}></img></td>
-              <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_default}></img></td>
-            </tr>
-            <tr>
-              <td>Shiny</td>
-              <td>--</td>
-              <td><img src={post.sprites.versions["generation-ii"].silver.front_shiny}></img></td>
-              <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_shiny}></img></td>
-              <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_shiny}></img></td>
-              <td><img src={post.sprites.versions["generation-v"]["black-white"].front_shiny}></img></td>
-              <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_shiny}></img></td>
-              <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_shiny}></img></td>
-            </tr>
-            </table>
-          </div>
+      <div className="main">
+        <div className="nav-bar-pokedex">
+          <button>Moves</button>
+          <button>Type effectiveness</button>
+          <button>Stats</button>
         </div>
+        <div className="grid-row display-box">
+          <div>
+              <div className="name-image-display">
+                <p className="pokemon-name">{post.name}</p>
+                <div className="type">
+                  {post.types.map(val => {
+                    let name = "type-icon type-"+val.type.name;
+                    return (
+                    <div className="type-name" key={val.type.name}>
+                      <button className={name} >{val.type.name}</button> 
+                    </div>
+                    );
+                  })}
+                </div>
+                <p> <img src={post.sprites.other['official-artwork'].front_default} alt="Offical artwork of the Pokemon"></img> </p>
+              </div>
+              <div className="grid-row">
+                <div>
+                  <h3>Average Height</h3>
+                  <p>{meters}m ({feet}'{inches})</p>
+                  <h3>Average Weight</h3>
+                  <p>{kg}kg {pounds}lbs</p>
+                  <h3>Abilities</h3>
+                  {post.abilities.map(val => {
+                    if (!val.is_hidden)  return <p key={val.ability.name}>{val.ability.name}</p>
+                    return <small className="hidden_ability" key={val.ability.name} >{val.ability.name} (hidden)</small>
+                  })}
+                </div>
+              </div>
+            </div>
+
+
+            <div className="display-box-2">
+              
+              {/* <div>
+                  {post.stats.map(val => {
+                    return (<>
+                    <div className="stats">
+                      <div className="stat-name">{val.stat.name} </div>
+                      <div className="stat" > {val.base_stat} </div> 
+                    </div>
+                    </>);
+                  })}
+              </div>  */}
+              <div className="type-tables">
+                <MakeTypeEffectivenessTable types={post.types}/>
+              </div>
+              
+            </div>
+
+
+
+
+          </div>
       </div>
 
 
@@ -223,3 +204,51 @@ function App() {
 }
 
 export default App;
+
+/*
+            <div> 
+              <MakeTypeEffectivenessTable types={post.types}/>
+            </div>
+            <div className="grid-row">
+              <MakeTable lrtMovesProp={lrtLevel} learntMethodName="Level"/>
+              <MakeTable lrtMovesProp={lrtEgg} learntMethodName="Egg"/>
+              <MakeTable lrtMovesProp={lrtMachien} learntMethodName="Machien"/>
+            </div>
+*/
+
+
+/* <div>
+ <h3>Sprites</h3>
+ <table>
+   <tr>
+     <th>Type</th>
+     <th>Generation 1</th>
+     <th>Generation 2</th>
+     <th>Generation 3</th>
+     <th>Generation 4</th>
+     <th>Generation 5</th>
+     <th>Generation 6</th>
+     <th>Generation 7</th>
+   </tr>
+ <tr>
+   <td>Normal</td>
+   <td><img src={post.sprites.versions["generation-i"]["red-blue"].front_gray}></img></td>
+   <td><img src={post.sprites.versions["generation-ii"].silver.front_default}></img></td>
+   <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_default}></img></td>
+   <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_default}></img></td>
+   <td><img src={post.sprites.versions["generation-v"]["black-white"].front_default}></img></td>
+   <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_default}></img></td>
+   <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_default}></img></td>
+ </tr>
+ <tr>
+   <td>Shiny</td>
+   <td>--</td>
+   <td><img src={post.sprites.versions["generation-ii"].silver.front_shiny}></img></td>
+   <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_shiny}></img></td>
+   <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_shiny}></img></td>
+   <td><img src={post.sprites.versions["generation-v"]["black-white"].front_shiny}></img></td>
+   <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_shiny}></img></td>
+   <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_shiny}></img></td>
+ </tr>
+ </table>
+ </div>*/

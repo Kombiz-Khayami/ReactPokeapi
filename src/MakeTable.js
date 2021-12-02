@@ -63,78 +63,78 @@ function MakeTable(props){
 
       
       function makeTable(array, learnt_method) {
-        if (array.length === 0) {
-          return;
-        }
+        if (array.length === 0) return;
+        
     
         if (learnt_method === "Level")
         {
           return(
             <div>
-            {/* <button onClick={() => handleSortReverse("fnNumber", "level_learned_at")}>Sort by Level</button>  */}
-             
- 
             <h3>Moves learnt by Level up</h3>
             <table>
-              <tr>
-              <th><button onClick={() => handleSortReverse("fnNumber", "level_learned_at")}>Level</button></th>
-              <th><button onClick={() => handleSortReverse("fnString", "name")}>Move</button></th>
-              <th><button onClick={() => handleSortReverse("fnString", "type")}>Type</button> </th>
-              <th><button onClick={() => handleSortReverse("fnString", "damage_class")}>Category</button></th>
-              <th><button onClick={() => handleSortReverse("fnNumber", "power")}>Power</button> </th>
-              <th><button onClick={() => handleSortReverse("fnNumber", "accuracy")}>Accuracy</button></th>
-              </tr> 
-            {array.sort(sortDirections[currSortDirection][sortBy]).map(val =>{
-              return(
-              <tr>
-                <td>{val.level_learned_at}</td>
-                <td>{pokemonMoves[val.url].name}</td>
-                <div class="type-name">
-                  <button class={"type-icon type-"+pokemonMoves[val.url].type.toLowerCase()}>
-                    {pokemonMoves[val.url].type}
-                  </button> 
-                </div>
-                <td>{pokemonMoves[val.url].damage_class}</td>
-                <td>{pokemonMoves[val.url].power <= 0 ? '-' : pokemonMoves[val.url].power}</td>
-                <td>{pokemonMoves[val.url].accuracy <= 0 ? '-' : pokemonMoves[val.url].accuracy }</td>
-              </tr>
-              );
-            })}
+                <tbody>
+                <tr>
+                  <th><button onClick={() => handleSortReverse("fnNumber", "level_learned_at")}>Level</button></th>
+                  <th><button onClick={() => handleSortReverse("fnString", "name")}>Move</button></th>
+                  <th><button onClick={() => handleSortReverse("fnString", "type")}>Type</button> </th>
+                  <th><button onClick={() => handleSortReverse("fnString", "damage_class")}>Category</button></th>
+                  <th><button onClick={() => handleSortReverse("fnNumber", "power")}>Power</button> </th>
+                  <th><button onClick={() => handleSortReverse("fnNumber", "accuracy")}>Accuracy</button></th>
+                </tr> 
+              {array.sort(sortDirections[currSortDirection][sortBy]).map(val =>{
+                return(
+                <tr key={pokemonMoves[val.url]["name"]+val.level_learned_at}>
+                  <td>{val.level_learned_at}</td>
+                  <td>{pokemonMoves[val.url].name}</td>
+                  <td className="type-name">
+                    <button className={"type-icon type-"+pokemonMoves[val.url].type.toLowerCase()}>
+                      {pokemonMoves[val.url].type}
+                    </button> 
+                  </td>
+                  <td>{pokemonMoves[val.url].damage_class}</td>
+                  <td>{pokemonMoves[val.url].power <= 0 ? '-' : pokemonMoves[val.url].power}</td>
+                  <td>{pokemonMoves[val.url].accuracy <= 0 ? '-' : pokemonMoves[val.url].accuracy }</td>
+                </tr>
+                );
+              })}
+              </tbody>
             </table>
           </div>
           );
         }
+
         return (<div>
         <h3>Moves learnt by {learnt_method}</h3>
           <table>
-            <tr>
-              <th><button onClick={() => handleSortReverse("fnString", "name")}>Move</button></th>
-              <th><button onClick={() => handleSortReverse("fnString", "type")}>Type</button> </th>
-              <th><button onClick={() => handleSortReverse("fnString", "damage_class")}>Category</button></th>
-              <th><button onClick={() => handleSortReverse("fnNumber", "power")}>Power</button> </th>
-              <th><button onClick={() => handleSortReverse("fnNumber", "accuracy")}>Accuracy</button></th>
-            </tr>
-          {array.sort(sortDirections[currSortDirection][sortBy]).map(val =>{
-            return(
-            <tr>
-              <td>{pokemonMoves[val.url].name}</td>
-              <div class="type-name">
-                <button class={"type-icon type-"+pokemonMoves[val.url].type.toLowerCase()}>
-                  {pokemonMoves[val.url].type}
-                </button> 
-              </div>
-              <td>{pokemonMoves[val.url].damage_class}</td>
-              <td>{pokemonMoves[val.url].power <= 0 ? '-' : pokemonMoves[val.url].power}</td>
-              <td>{pokemonMoves[val.url].accuracy <= 0 ? '-' : pokemonMoves[val.url].accuracy}</td>
-            </tr>
-            );
-          })}
+            <tbody>
+              <tr>
+                <th><button onClick={() => handleSortReverse("fnString", "name")}>Move</button></th>
+                <th><button onClick={() => handleSortReverse("fnString", "type")}>Type</button> </th>
+                <th><button onClick={() => handleSortReverse("fnString", "damage_class")}>Category</button></th>
+                <th><button onClick={() => handleSortReverse("fnNumber", "power")}>Power</button> </th>
+                <th><button onClick={() => handleSortReverse("fnNumber", "accuracy")}>Accuracy</button></th>
+              </tr>
+            {array.sort(sortDirections[currSortDirection][sortBy]).map(val =>{
+              return(
+              <tr key={pokemonMoves[val.url].name}>
+                <td>{pokemonMoves[val.url].name}</td>
+                <td className="type-name">
+                  <button className={"type-icon type-"+pokemonMoves[val.url].type.toLowerCase()}>
+                    {pokemonMoves[val.url].type}
+                  </button> 
+                </td>
+                <td>{pokemonMoves[val.url].damage_class}</td>
+                <td>{pokemonMoves[val.url].power <= 0 ? '-' : pokemonMoves[val.url].power}</td>
+                <td>{pokemonMoves[val.url].accuracy <= 0 ? '-' : pokemonMoves[val.url].accuracy}</td>
+              </tr>
+              );
+            })}
+            </tbody>
           </table>
         </div>);
       }
 
-      if (lrtMoves <= 0)
-        return (<p>This pokemon doesn't have any egg moves</p>);
+      if (lrtMoves <= 0) return (<p>This pokemon doesn't have any egg moves</p>);
 
       return(
           makeTable(lrtMoves, learnt_method)  

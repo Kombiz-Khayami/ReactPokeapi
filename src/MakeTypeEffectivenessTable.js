@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import React from 'react';
 import pokemonTypes from './pokemonTypes';
 
@@ -93,18 +92,20 @@ let allTypes ={
         damage_taken:100
     }
 }
-    props.types.map(value => {
-        pokemonTypes[value.type.name.toLowerCase()].damage_relations.double_damage_from.map(   //grab type details based on what type the pokemon is
+    props.types.forEach(value => {
+        pokemonTypes[value.type.name.toLowerCase()].damage_relations.double_damage_from.forEach(   //grab type details based on what type the pokemon is
             val => {
                 allTypes[val.name].damage_taken *=2;
                 allTypes[val.name].name = "cell-"+allTypes[val.name].damage_taken;
         });
-        pokemonTypes[value.type.name.toLowerCase()].damage_relations.half_damage_from.map(     //grab type details based on what type the pokemon is
+
+        pokemonTypes[value.type.name.toLowerCase()].damage_relations.half_damage_from.forEach(     //grab type details based on what type the pokemon is
             val => {
                 allTypes[val.name].damage_taken *=0.5;
                 allTypes[val.name].name = "cell-"+allTypes[val.name].damage_taken;
         });
-        pokemonTypes[value.type.name.toLowerCase()].damage_relations.no_damage_from.map(     //grab type details based on what type the pokemon is
+
+        pokemonTypes[value.type.name.toLowerCase()].damage_relations.no_damage_from.forEach(     //grab type details based on what type the pokemon is
             val => {
                 allTypes[val.name].damage_taken *=0;
                 allTypes[val.name].name = "cell-"+allTypes[val.name].damage_taken;
@@ -114,40 +115,38 @@ let allTypes ={
 
 
       return(<>
-        <div class="type-tables">
-            <th>Damage Taken</th>
+            <h4>Damage Taken</h4>
             <table>
                 <tbody>
                     <tr>
-                        <td class ="type-icon type-normal">Nor</td>
-                        <td class ="type-icon type-fire">Fir</td>
-                        <td class ="type-icon type-water">Wat</td>
-                        <td class ="type-icon type-electric">Ele</td>
-                        <td class ="type-icon type-grass">Gra</td>
-                        <td class ="type-icon type-ice">Ice</td>
-                        <td class ="type-icon type-fighting">Fig</td>
-                        <td class ="type-icon type-poison">Poi</td>
-                        <td class ="type-icon type-ground">Gro</td>
-                        <td class ="type-icon type-fly">Fly</td>
-                        <td class ="type-icon type-psychic">Psy</td>
-                        <td class ="type-icon type-bug">Bug</td>
-                        <td class ="type-icon type-rock">Roc</td>
-                        <td class ="type-icon type-ghost">Gho</td>
-                        <td class ="type-icon type-dragon">Dra</td>
-                        <td class ="type-icon type-dark">Dar</td>
-                        <td class ="type-icon type-steel">Ste</td>
-                        <td class ="type-icon type-fairy">Fai</td>
+                        <th className ="type-icon type-normal">Nor</th>
+                        <th className ="type-icon type-fire">Fir</th>
+                        <th className ="type-icon type-water">Wat</th>
+                        <th className ="type-icon type-electric">Ele</th>
+                        <th className ="type-icon type-grass">Gra</th>
+                        <th className ="type-icon type-ice">Ice</th>
+                        <th className ="type-icon type-fighting">Fig</th>
+                        <th className ="type-icon type-poison">Poi</th>
+                        <th className ="type-icon type-ground">Gro</th>
+                        <th className ="type-icon type-fly">Fly</th>
+                        <th className ="type-icon type-psychic">Psy</th>
+                        <th className ="type-icon type-bug">Bug</th>
+                        <th className ="type-icon type-rock">Roc</th>
+                        <th className ="type-icon type-ghost">Gho</th>
+                        <th className ="type-icon type-dragon">Dra</th>
+                        <th className ="type-icon type-dark">Dar</th>
+                        <th className ="type-icon type-steel">Ste</th>
+                        <th className ="type-icon type-fairy">Fai</th>
                     </tr>
                     <tr>
                         {Object.entries(allTypes).map(([key, value]) => {
 
-                        return(<td class={value.name}>{value.damage_taken/100}</td>);
+                        return(<td className={value.name} key={key}>{value.damage_taken/100}</td>);
 
                         })}
                     </tr>
                 </tbody>
             </table> 
-        </div>
       </>);
 
 } 
