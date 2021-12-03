@@ -15,9 +15,9 @@ what is effective against it?
 */
 
 function MakeTypeEffectivenessTable(props){
-    /*
-    damage_taken : the damage the pokemon is going to take from X type
-    */
+/*
+damage_taken : the damage the pokemon is going to take from X type
+*/
 let allTypes ={
     normal: {
         name:"",

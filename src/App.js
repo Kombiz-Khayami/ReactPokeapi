@@ -130,7 +130,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <div>
         <input type="text" placeholder="Search Pokemon" onChange={handleChange}/>
         <button onClick={handleSearch}>Search</button>
 
@@ -140,41 +139,35 @@ function App() {
           <button>Type effectiveness</button>
           <button>Stats</button>
         </div>
-        <div className="grid-row display-box">
+        <div className="grid-row">
           <div>
               <div className="name-image-display">
                 <p className="pokemon-name">{post.name}</p>
                 <div className="type">
                   {post.types.map(val => {
-                    let name = "type-icon type-"+val.type.name;
-                    return (
-                    <div className="type-name" key={val.type.name}>
-                      <button className={name} >{val.type.name}</button> 
-                    </div>
-                    );
+                    let name = "type-name type-icon type-"+val.type.name;
+                    return (<button className={name} >{val.type.name}</button>);
                   })}
                 </div>
-                <p> <img src={post.sprites.other['official-artwork'].front_default} alt="Offical artwork of the Pokemon"></img> </p>
+              <img src={post.sprites.other['official-artwork'].front_default} alt="Offical artwork of the Pokemon"></img>
               </div>
-              <div className="grid-row">
-                <div>
-                  <h3>Average Height</h3>
-                  <p>{meters}m ({feet}'{inches})</p>
-                  <h3>Average Weight</h3>
-                  <p>{kg}kg {pounds}lbs</p>
-                  <h3>Abilities</h3>
-                  {post.abilities.map(val => {
-                    if (!val.is_hidden)  return <p key={val.ability.name}>{val.ability.name}</p>
-                    return <small className="hidden_ability" key={val.ability.name} >{val.ability.name} (hidden)</small>
-                  })}
-                </div>
+              <div>
+                <h3>Average Height</h3>
+                <p>{meters}m ({feet}'{inches})</p>
+                <h3>Average Weight</h3>
+                <p>{kg}kg {pounds}lbs</p>
+                <h3>Abilities</h3>
+                {post.abilities.map(val => {
+                  if (!val.is_hidden)  return <p key={val.ability.name}>{val.ability.name}</p>
+                  return <small className="hidden_ability" key={val.ability.name} >{val.ability.name} (hidden)</small>
+                })}
               </div>
             </div>
 
 
             <div className="display-box-2">
               
-              {/* <div>
+              {/* 
                   {post.stats.map(val => {
                     return (<>
                     <div className="stats">
@@ -183,10 +176,10 @@ function App() {
                     </div>
                     </>);
                   })}
-              </div>  */}
-              <div className="type-tables">
+              */}
+              
                 <MakeTypeEffectivenessTable types={post.types}/>
-              </div>
+              
               
             </div>
 
@@ -195,9 +188,6 @@ function App() {
 
           </div>
       </div>
-
-
-    </div>
       </header>
     </div>
   );
