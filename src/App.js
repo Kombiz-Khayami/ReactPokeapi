@@ -10,6 +10,7 @@ function App() {
   const [post, setPost] = useState(null);
   const [baseURL, setBaseURL] = useState("https://pokeapi.co/api/v2/pokemon/1")
   const [searchQuery, setSearchQuery] = useState('');
+  const [currDisplay, setCurrDisplay] = useState('stats')
   let [lrtMachien, lrtLevel, lrtEgg, lrtTutor] = [[], [], [], []];
   let newItem = {};
   let moveID = 0;
@@ -113,6 +114,100 @@ function App() {
     setSearchQuery(event.target.value.toLowerCase());
   }
 
+  function handleStats(){
+    setCurrDisplay("stats");
+  }
+
+  function handleMoves(){
+    setCurrDisplay("moves");
+  }
+
+  function handleTypeChart(){
+    setCurrDisplay("typeChart");
+  }
+
+  function handleSprites(){
+    setCurrDisplay("sprites");
+  }
+
+  function displayTypeChart(pp){
+    if (pp != "typeChart") return;
+    return(
+    <div className="type-tables">
+      <MakeTypeEffectivenessTable types={post.types}/>
+    </div>
+    );
+  }
+
+  function displayMoves(pp){
+    if (pp != "moves") return;
+    return(
+        <div className="grid-row">
+          <MakeTable lrtMovesProp={lrtLevel} learntMethodName="Level"/>
+          <MakeTable lrtMovesProp={lrtEgg} learntMethodName="Egg"/>
+          <MakeTable lrtMovesProp={lrtMachien} learntMethodName="Machien"/>
+        </div>
+    );
+  }
+
+  function displaySprites(pp){
+    if (pp != "sprites") return;
+    return(
+          <div>
+          <h3>Sprites</h3>
+          <table>
+            <tr>
+              <th>Type</th>
+              <th>Generation 1</th>
+              <th>Generation 2</th>
+              <th>Generation 3</th>
+              <th>Generation 4</th>
+              <th>Generation 5</th>
+              <th>Generation 6</th>
+              <th>Generation 7</th>
+            </tr>
+          <tr>
+            <td>Normal</td>
+            <td><img src={post.sprites.versions["generation-i"]["red-blue"].front_gray}></img></td>
+            <td><img src={post.sprites.versions["generation-ii"].silver.front_default}></img></td>
+            <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_default}></img></td>
+            <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_default}></img></td>
+            <td><img src={post.sprites.versions["generation-v"]["black-white"].front_default}></img></td>
+            <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_default}></img></td>
+            <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_default}></img></td>
+          </tr>
+          <tr>
+            <td>Shiny</td>
+            <td>--</td>
+            <td><img src={post.sprites.versions["generation-ii"].silver.front_shiny}></img></td>
+            <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_shiny}></img></td>
+            <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_shiny}></img></td>
+            <td><img src={post.sprites.versions["generation-v"]["black-white"].front_shiny}></img></td>
+            <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_shiny}></img></td>
+            <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_shiny}></img></td>
+          </tr>
+          </table>
+          </div>
+    );
+
+  }
+
+  function displayStats(pp){
+    if(pp != "stats") return
+    return(
+        <div className="stat-display-box">
+        {post.stats.map(val => {
+          return (<>
+          <div className="stats">
+            <div className="stat-name">{val.stat.name} </div>
+            <div className="stat" > {val.base_stat} </div> 
+          </div>
+          </>);
+        })}
+      </div>
+        );
+  }
+
   function testRecursion(value1){
     return Object.values(value1).map(val => {
       if ( typeof val === "object" && val != null) {
@@ -135,9 +230,10 @@ function App() {
 
       <div className="main">
         <div className="nav-bar-pokedex">
-          <button>Moves</button>
-          <button>Type effectiveness</button>
-          <button>Stats</button>
+          <button onClick={handleMoves}>Moves</button>
+          <button onClick={handleTypeChart}>Type effectiveness</button>
+          <button onClick={handleStats}>Stats</button>
+          <button onClick={handleSprites}>Sprites</button>
         </div>
         <div className="grid-row">
           <div>
@@ -146,7 +242,7 @@ function App() {
                 <div className="type">
                   {post.types.map(val => {
                     let name = "type-name type-icon type-"+val.type.name;
-                    return (<button className={name} >{val.type.name}</button>);
+                    return (<button className={name} key={val.type.name} >{val.type.name}</button>);
                   })}
                 </div>
               <img src={post.sprites.other['official-artwork'].front_default} alt="Offical artwork of the Pokemon"></img>
@@ -166,21 +262,10 @@ function App() {
 
 
             <div className="display-box-2">
-              
-              {/* 
-                  {post.stats.map(val => {
-                    return (<>
-                    <div className="stats">
-                      <div className="stat-name">{val.stat.name} </div>
-                      <div className="stat" > {val.base_stat} </div> 
-                    </div>
-                    </>);
-                  })}
-              */}
-              
-                <MakeTypeEffectivenessTable types={post.types}/>
-              
-              
+                {displayStats(currDisplay)}
+                {displayTypeChart(currDisplay)} 
+                {displayMoves(currDisplay)}      
+                {displaySprites(currDisplay)}
             </div>
 
 

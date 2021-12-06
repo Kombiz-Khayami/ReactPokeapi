@@ -33,6 +33,11 @@ body{
 }
 
 
+
+.display-box-2{
+  width:1075px;
+}
+
 .stats {
   display: flex;
 }
@@ -87,8 +92,13 @@ body{
 }
 
 .type-tables {
-  width:75%;
+  display: flex;
   flex-wrap: wrap;
+}
+
+.nav-bar-pokedex {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .pokemon-name::first-letter {
@@ -104,7 +114,7 @@ body{
 .type-bug{
   background-color:#cee934e5;
 }
-.type-fly, .type-flying{
+.type-fly, .type-flyingn{
   background-color:#849bff;
 }
 .type-fairy{
@@ -163,6 +173,14 @@ body{
 
 .main {
   display: block;
+  margin-right: 100px;
+  margin-left: auto;
+  max-width: 1550px;
+  width: 1550px;
+}
+
+.hidden {
+  display: none;
 }
 
 /* .moves{
@@ -182,3 +200,14 @@ body{
     transform: rotate(360deg);
   }
 }
+
+
+/*
+.sv-tabs-tab:active,.sv-tabs-tab:focus{color:#666;text-decoration:none}
+.sv-tabs-tab:hover,.sv-tabs-tab:active,.sv-tabs-tab:focus{background-color:#ddd}
+.sv-tabs-tab.active{background-color:#fff;border-bottom-color:#fff;color:#666}
+
+.sv-tabs-panel{display:none;padding:1rem 0}
+.sv-tabs-panel.active{display:block}
+.sv-tabs-panel:target{background-color:transparent}
+*/
