@@ -131,7 +131,7 @@ function App() {
   }
 
   function displayTypeChart(pp){
-    if (pp != "typeChart") return;
+    if (pp !== "typeChart") return;
     return(
     <div className="type-tables">
       <MakeTypeEffectivenessTable types={post.types}/>
@@ -140,7 +140,7 @@ function App() {
   }
 
   function displayMoves(pp){
-    if (pp != "moves") return;
+    if (pp !== "moves") return;
     return(
         <div className="grid-row">
           <MakeTable lrtMovesProp={lrtLevel} learntMethodName="Level"/>
@@ -151,41 +151,43 @@ function App() {
   }
 
   function displaySprites(pp){
-    if (pp != "sprites") return;
+    if (pp !== "sprites") return;
     return(
           <div>
           <h3>Sprites</h3>
           <table>
-            <tr>
-              <th>Type</th>
-              <th>Generation 1</th>
-              <th>Generation 2</th>
-              <th>Generation 3</th>
-              <th>Generation 4</th>
-              <th>Generation 5</th>
-              <th>Generation 6</th>
-              <th>Generation 7</th>
-            </tr>
-          <tr>
-            <td>Normal</td>
-            <td><img src={post.sprites.versions["generation-i"]["red-blue"].front_gray}></img></td>
-            <td><img src={post.sprites.versions["generation-ii"].silver.front_default}></img></td>
-            <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_default}></img></td>
-            <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_default}></img></td>
-            <td><img src={post.sprites.versions["generation-v"]["black-white"].front_default}></img></td>
-            <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_default}></img></td>
-            <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_default}></img></td>
-          </tr>
-          <tr>
-            <td>Shiny</td>
-            <td>--</td>
-            <td><img src={post.sprites.versions["generation-ii"].silver.front_shiny}></img></td>
-            <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_shiny}></img></td>
-            <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_shiny}></img></td>
-            <td><img src={post.sprites.versions["generation-v"]["black-white"].front_shiny}></img></td>
-            <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_shiny}></img></td>
-            <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_shiny}></img></td>
-          </tr>
+            <tbody>
+              <tr>
+                <th>Type</th>
+                <th>Generation 1</th>
+                <th>Generation 2</th>
+                <th>Generation 3</th>
+                <th>Generation 4</th>
+                <th>Generation 5</th>
+                <th>Generation 6</th>
+                <th>Generation 7</th>
+              </tr>
+              <tr>
+                <td>Normal</td>
+                <td><img src={post.sprites.versions["generation-i"]["red-blue"].front_gray} alt="pokemon sprit for generation 1"></img></td>
+                <td><img src={post.sprites.versions["generation-ii"].silver.front_default} alt="pokemon sprit for generation 2"></img></td>
+                <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_default} alt="pokemon sprit for generation 3"></img></td>
+                <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_default} alt="pokemon sprit for generation 4"></img></td>
+                <td><img src={post.sprites.versions["generation-v"]["black-white"].front_default} alt="pokemon sprit for generation 5"></img></td>
+                <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_default} alt="pokemon sprit for generation 6"></img></td>
+                <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_default} alt="pokemon sprit for generation 7"></img></td>
+              </tr>
+              <tr>
+                <td>Shiny</td>
+                <td>--</td>
+                <td><img src={post.sprites.versions["generation-ii"].silver.front_shiny} alt="the shiny pokemon sprit varient for generation 2. generation one doesn't have a shiny varient"></img></td>
+                <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_shiny} alt="the shiny pokemon sprit varient for generation 3"></img></td>
+                <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_shiny} alt="the shiny pokemon sprit varient for generation 4"></img></td>
+                <td><img src={post.sprites.versions["generation-v"]["black-white"].front_shiny} alt="the shiny pokemon sprit varient for generation 5"></img></td>
+                <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_shiny} alt="the shiny pokemon sprit varient for generation 6"></img></td>
+                <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_shiny} alt="the shiny pokemon sprit varient for generation 7"></img></td>
+              </tr>
+            </tbody>
           </table>
           </div>
     );
@@ -193,16 +195,16 @@ function App() {
   }
 
   function displayStats(pp){
-    if(pp != "stats") return
+    if(pp !== "stats") return
     return(
         <div className="stat-display-box">
         {post.stats.map(val => {
-          return (<>
-          <div className="stats">
+          return (
+          <div className="stats" key={val.stat.name}>
             <div className="stat-name">{val.stat.name} </div>
             <div className="stat" > {val.base_stat} </div> 
           </div>
-          </>);
+          );
         })}
       </div>
         );
@@ -210,10 +212,10 @@ function App() {
 
   function testRecursion(value1){
     return Object.values(value1).map(val => {
-      if ( typeof val === "object" && val != null) {
+      if ( typeof val === "object" && val !== null) {
         return testRecursion(val);
       }
-      else if(val !=null) {
+      else if(val !== null) {
         return <p> <img src={val} alt="Art work of the Pokemon" /> </p>;
       }
       else 
