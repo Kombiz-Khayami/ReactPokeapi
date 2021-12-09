@@ -873,9 +873,9 @@ const moves =
             },
                 
             86	:{
-                name: 'Thunder Wave\tElectric', 
-                type: 'Status', 
-                damage_class: '0', 
+                name: 'Thunder Wave', 
+                type: 'Electric', 
+                damage_class: 'Status', 
                 power: 0, 
                 accuracy: 90
             },
