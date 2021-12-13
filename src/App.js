@@ -144,8 +144,8 @@ function App() {
     return(
         <div className="grid-row">
           <MakeTable lrtMovesProp={lrtLevel} learntMethodName="Level"/>
-          <MakeTable lrtMovesProp={lrtEgg} learntMethodName="Egg"/>
-          <MakeTable lrtMovesProp={lrtMachien} learntMethodName="Machien"/>
+          {/* <MakeTable lrtMovesProp={lrtEgg} learntMethodName="Egg"/>
+          <MakeTable lrtMovesProp={lrtMachien} learntMethodName="Machien"/> */}
         </div>
     );
   }
@@ -159,33 +159,44 @@ function App() {
             <tbody>
               <tr>
                 <th>Type</th>
-                <th>Generation 1</th>
-                <th>Generation 2</th>
-                <th>Generation 3</th>
-                <th>Generation 4</th>
-                <th>Generation 5</th>
-                <th>Generation 6</th>
-                <th>Generation 7</th>
+                <th>Normal</th>
+                <th>Shiny</th>
               </tr>
               <tr>
-                <td>Normal</td>
-                <td><img src={post.sprites.versions["generation-i"]["red-blue"].front_gray} alt="pokemon sprit for generation 1"></img></td>
-                <td><img src={post.sprites.versions["generation-ii"].silver.front_default} alt="pokemon sprit for generation 2"></img></td>
-                <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_default} alt="pokemon sprit for generation 3"></img></td>
-                <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_default} alt="pokemon sprit for generation 4"></img></td>
-                <td><img src={post.sprites.versions["generation-v"]["black-white"].front_default} alt="pokemon sprit for generation 5"></img></td>
-                <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_default} alt="pokemon sprit for generation 6"></img></td>
-                <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_default} alt="pokemon sprit for generation 7"></img></td>
+                  <th>Generation 1</th>
+                  <td><img src={post.sprites.versions["generation-i"]["red-blue"].front_gray} alt="pokemon sprit for generation 1"></img></td>
+                  <td>--</td>
               </tr>
               <tr>
-                <td>Shiny</td>
-                <td>--</td>
-                <td><img src={post.sprites.versions["generation-ii"].silver.front_shiny} alt="the shiny pokemon sprit varient for generation 2. generation one doesn't have a shiny varient"></img></td>
-                <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_shiny} alt="the shiny pokemon sprit varient for generation 3"></img></td>
-                <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_shiny} alt="the shiny pokemon sprit varient for generation 4"></img></td>
-                <td><img src={post.sprites.versions["generation-v"]["black-white"].front_shiny} alt="the shiny pokemon sprit varient for generation 5"></img></td>
-                <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_shiny} alt="the shiny pokemon sprit varient for generation 6"></img></td>
-                <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_shiny} alt="the shiny pokemon sprit varient for generation 7"></img></td>
+                  <th>Generation 2</th>
+                  <td><img src={post.sprites.versions["generation-ii"].silver.front_default} alt="pokemon sprit for generation 2"></img></td>
+                  <td><img src={post.sprites.versions["generation-ii"].silver.front_shiny} alt="the shiny pokemon sprit varient for generation 2. generation one doesn't have a shiny varient"></img></td>
+              </tr>
+
+              <tr>
+                  <th>Generation 3</th>
+                  <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_default} alt="pokemon sprit for generation 3"></img></td>
+                  <td><img src={post.sprites.versions["generation-iii"]["ruby-sapphire"].front_shiny} alt="the shiny pokemon sprit varient for generation 3."></img></td>
+              </tr>
+              <tr>
+                  <th>Generation 4</th>
+                  <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_default} alt="pokemon sprit for generation 4"></img></td>
+                  <td><img src={post.sprites.versions["generation-iv"]["diamond-pearl"].front_shiny} alt="the shiny pokemon sprit varient for generation 4."></img></td>
+              </tr>
+              <tr>
+                  <th>Generation 5</th>
+                  <td><img src={post.sprites.versions["generation-v"]["black-white"].front_default} alt="pokemon sprit for generation 5"></img></td>
+                  <td><img src={post.sprites.versions["generation-v"]["black-white"].front_shiny} alt="the shiny pokemon sprit varient for generation 5."></img></td>
+              </tr>
+              <tr>
+                  <th>Generation 6</th>
+                  <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_default} alt="pokemon sprit for generation 6"></img></td>
+                  <td><img src={post.sprites.versions["generation-vi"]["x-y"].front_shiny} alt="the shiny pokemon sprit varient for generation 6."></img></td>
+              </tr>
+              <tr>
+                  <th>Generation 7</th>
+                  <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_default} alt="pokemon sprit for generation 7"></img></td>
+                  <td><img src={post.sprites.versions["generation-vii"]["ultra-sun-ultra-moon"].front_shiny} alt="the shiny pokemon sprit varient for generation 7."></img></td>
               </tr>
             </tbody>
           </table>
@@ -223,31 +234,33 @@ function App() {
     })
   }
 
-  return (
+  return (<>
+    <header className="App-header">
+      <img src={logo} className="App-logo" alt="logo" />
+    </header>
+    <nav>
+      <input type="text" placeholder="Search Pokemon" onChange={handleChange} />
+      <button onClick={handleSearch}>Search</button>
+    </nav>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <input type="text" placeholder="Search Pokemon" onChange={handleChange}/>
-        <button onClick={handleSearch}>Search</button>
-
-      <div className="main">
-        <div className="nav-bar-pokedex">
-          <button onClick={handleMoves}>Moves</button>
-          <button onClick={handleTypeChart}>Type effectiveness</button>
-          <button onClick={handleStats}>Stats</button>
-          <button onClick={handleSprites}>Sprites</button>
-        </div>
-        <div className="grid-row">
-          <div>
+        <div className="main">
+          <div className="nav-bar-pokedex">
+            <button onClick={handleMoves}>Moves</button>
+            <button onClick={handleTypeChart}>Type effectiveness</button>
+            <button onClick={handleStats}>Stats</button>
+            <button onClick={handleSprites}>Sprites</button>
+          </div>
+          <div className="grid-row">
+            <div>
               <div className="name-image-display">
                 <p className="pokemon-name">{post.name}</p>
                 <div className="type">
                   {post.types.map(val => {
-                    let name = "type-name type-icon type-"+val.type.name;
-                    return (<button className={name} key={val.type.name} >{val.type.name}</button>);
+                    let name = "type-name type-icon type-" + val.type.name;
+                    return (<button className={name} key={val.type.name}>{val.type.name}</button>);
                   })}
                 </div>
-              <img src={post.sprites.other['official-artwork'].front_default} alt="Offical artwork of the Pokemon"></img>
+                <img src={post.sprites.other['official-artwork'].front_default} alt="Offical artwork of the Pokemon"></img>
               </div>
               <div>
                 <h3>Average Height</h3>
@@ -256,27 +269,23 @@ function App() {
                 <p>{kg}kg {pounds}lbs</p>
                 <h3>Abilities</h3>
                 {post.abilities.map(val => {
-                  if (!val.is_hidden)  return <p key={val.ability.name}>{val.ability.name}</p>
-                  return <small className="hidden_ability" key={val.ability.name} >{val.ability.name} (hidden)</small>
+                  if (!val.is_hidden)
+                    return <p key={val.ability.name}>{val.ability.name}</p>;
+                  return <small className="hidden_ability" key={val.ability.name}>{val.ability.name} (hidden)</small>;
                 })}
               </div>
             </div>
 
 
             <div className="display-box-2">
-                {displayStats(currDisplay)}
-                {displayTypeChart(currDisplay)} 
-                {displayMoves(currDisplay)}      
-                {displaySprites(currDisplay)}
+              {displayStats(currDisplay)}
+              {displayTypeChart(currDisplay)}
+              {displayMoves(currDisplay)}
+              {displaySprites(currDisplay)}
             </div>
-
-
-
-
           </div>
-      </div>
-      </header>
-    </div>
+        </div>
+      </div></>
   );
 }
 
