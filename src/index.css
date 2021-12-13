@@ -1,14 +1,25 @@
 *, *::before, *::after {
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
 
 * {
   margin: 0;
 }
 
+html, body{
+  height: 100%;
+}
 
-html {
-  
+body {
+  line-height: 1.5;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+#root {
+  isolation: isolate;
 }
 
 body {
@@ -19,10 +30,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 1600px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@media (max-width: 768px) /*max-width <= 768*/
+{
+
+    
+}
+
+
+@media (min-width: 768px) /*max-width >= 768*/
+{
+
+    
+}
+

@@ -117,35 +117,16 @@ let allTypes ={
       return(<>
             <h4>Damage Taken</h4>
             <table>
-                <tbody>
-                    <tr>
-                        <th className ="type-icon type-normal">Nor</th>
-                        <th className ="type-icon type-fire">Fir</th>
-                        <th className ="type-icon type-water">Wat</th>
-                        <th className ="type-icon type-electric">Ele</th>
-                        <th className ="type-icon type-grass">Gra</th>
-                        <th className ="type-icon type-ice">Ice</th>
-                        <th className ="type-icon type-fighting">Fig</th>
-                        <th className ="type-icon type-poison">Poi</th>
-                        <th className ="type-icon type-ground">Gro</th>
-                        <th className ="type-icon type-fly">Fly</th>
-                        <th className ="type-icon type-psychic">Psy</th>
-                        <th className ="type-icon type-bug">Bug</th>
-                        <th className ="type-icon type-rock">Roc</th>
-                        <th className ="type-icon type-ghost">Gho</th>
-                        <th className ="type-icon type-dragon">Dra</th>
-                        <th className ="type-icon type-dark">Dar</th>
-                        <th className ="type-icon type-steel">Ste</th>
-                        <th className ="type-icon type-fairy">Fai</th>
-                    </tr>
-                    <tr>
-                        {Object.entries(allTypes).map(([key, value]) => {
-
-                        return(<td className={value.name} key={key}>{value.damage_taken/100}</td>);
-
-                        })}
-                    </tr>
-                </tbody>
+                <tbody>    
+                    {Object.entries(allTypes).map(([key, value]) => {
+                        return(<>
+                            <tr>
+                                <td className = {"type-icon type-"+key}>{key}</td>
+                                <td className={value.name} key={key}>{value.damage_taken/100}</td>
+                            </tr>
+                        </>);
+                    })}
+                    </tbody>
             </table> 
       </>);
 

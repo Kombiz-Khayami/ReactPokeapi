@@ -21,10 +21,7 @@
 }
 
 .main {
-  background-color: #282c34;
   display: block;
-  margin-right: 100px;
-  margin-left: 100px;
   max-width: 1550px;
   width: 1550px;
   align-items: center;
@@ -36,9 +33,6 @@
   color: #61dafb;
 }
 
-
-
-
 .display-box-2{
   width:1075px;
   background-color: teal;
@@ -49,7 +43,7 @@
  
 .display-box-2 > div{
   background-color: rgb(175, 171, 171);
-  margin: 5em;
+  margin: 2em;
   color: #16191a;
   border-radius: 10px;
 }
