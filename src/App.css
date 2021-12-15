@@ -4,28 +4,38 @@
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 35vmin;
+  width: 35vmin;
 }
 
+.App-header {
+  text-align: center;
+}
+
+/* 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} 
 
-.App-header {
-  
-  display: flex;
-  flex-direction: column;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
+*/
+
+
 
 .main {
   display: block;
-  max-width: 1550px;
-  width: 1550px;
-  align-items: center;
-  justify-content: center;
+  max-width: 1440px;
+  width: 1440px;
+  box-align: center;
   color: white;
 }
 
@@ -34,7 +44,8 @@
 }
 
 .display-box-2{
-  width:1075px;
+  width:590px;
+  height:710px;
   background-color: teal;
   margin-bottom: 50px;
   margin-top: 50px;
@@ -46,16 +57,8 @@
   margin: 2em;
   color: #16191a;
   border-radius: 10px;
-}
-
-
-
-.stats {
-  display: flex;
-}
-
-.stat {
-  margin-left: 250px;
+  height:auto;
+  width:auto;
 }
 
 .type {
@@ -87,7 +90,7 @@
 }
 
 .type-icon{
- width: 66px;
+ width: 125px;
  /* margin-bottom: 4 px ; */
  background: #dbdbdb;
  /* border: 1 px solid #a3a3a3; */
@@ -105,6 +108,7 @@
 
 .type-tables {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
@@ -112,9 +116,15 @@
   color: #ffdd57;
 }
 
+nav {
+  text-align: center;
+}
+
 .nav-bar-pokedex {
   display: flex;
   flex-direction: row-reverse;
+  justify-content:flex-start;
+  margin-right: 200px;
 }
 
 .pokemon-name::first-letter {
@@ -179,8 +189,17 @@
 .grid-row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
+.stats {
+  display: flex;
+  margin-top: 3px;
+}
+
+.stat {
+  margin-left: 250px; 
+}
 
 .stat-name {
   width: 140px;
@@ -198,13 +217,9 @@
   text-align: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.moveBtn{
+  width: 50%;
 }
 
 
