@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './pokeball.png';
 import './App.css';
 import { useState } from 'react';
 import React from 'react';
@@ -212,8 +212,10 @@ function App() {
         {post.stats.map(val => {
           return (
           <div className="stats" key={val.stat.name}>
-            <div className="stat-name">{val.stat.name} </div>
+            <div className="stat-name">
+               <p>{val.stat.name}</p> </div>
             <div className="stat" > {val.base_stat} </div> 
+            <div style={{width: val.base_stat, backgroundColor: "rgb(105, 194, 61)"}}></div>
           </div>
           );
         })}
@@ -256,8 +258,7 @@ function App() {
                 <p className="pokemon-name">{post.name}</p>
                 <div className="type">
                   {post.types.map(val => {
-                    let name = "type-name type-icon type-" + val.type.name;
-                    return (<button className={name} key={val.type.name}>{val.type.name}</button>);
+                    return (<button className={"type-name type-icon type-" + val.type.name} key={val.type.name}>{val.type.name}</button>);
                   })}
                 </div>
                 <img src={post.sprites.other['official-artwork'].front_default} alt="Offical artwork of the Pokemon"></img>
